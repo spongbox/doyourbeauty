@@ -1,0 +1,13 @@
+$badass: pink;
+$power: blue;
+
+body {
+  margin: 0;
+  background-color: $badass;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: $power;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "doyourbeauty",
+  "version": "0.0.1",
+  "description": "Project Master Startup IESA Multimédoa",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./bin/dev",
+    "reload-server": "./bin/reload-server",
+    "build-js": "./bin/build-js",
+    "build-css": "./bin/build-css",
+    "watch-js": "./bin/watch-js",
+    "watch-css": "./bin/watch-css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spongbox/doyourbeauty.git"
+  },
+  "keywords": [
+    "cosmetic",
+    "startup",
+    "e-commerce"
+  ],
+  "author": "Raphaël Choquet",
+  "license": "SEE LICENSE IN LICENCE",
+  "bugs": {
+    "url": "https://github.com/spongbox/doyourbeauty/issues"
+  },
+  "homepage": "https://github.com/spongbox/doyourbeauty#readme",
+  "devDependencies": {
+    "concat": "^1.0.0",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1",
+    "parallelshell": "^2.0.0"
+  }
+}
