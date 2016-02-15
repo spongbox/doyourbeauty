@@ -1,0 +1,85 @@
+@import "lib/_normalize.scss";
+main {
+  position: relative;
+}
+
+.section-bckg {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 80vh;
+  background: center no-repeat;
+  background-size: cover;
+
+  &.hight {
+    height: 95vh;
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5em 1em;
+  border: 1px solid #D5D5D5;
+  background: #E4E4E4;
+  color: #454545;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+
+  &-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background: #454545;
+    color: #E4E4E4;
+  }
+}
+.title {
+  padding: 50px;
+  margin: 0;
+  text-align: center;
+}
+
+.list-steps {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.list-steps li {
+  max-width: 200px;
+}
+
+.list-steps img {
+  width: 100%;
+}
+
+.text-description {
+  max-width: 550px;
+  margin: 2em auto;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  a {
+    display: block;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+}
