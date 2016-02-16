@@ -1,1 +1,0 @@
-uglifyjs app/*.js -o js/app.min.js --source-map js/app.min.js.map --source-map-root http://root.doyourbeauty.dev -c -m

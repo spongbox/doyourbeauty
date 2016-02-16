@@ -1,1 +1,3 @@
-var toto = "app";
+(function () {
+  angular.module('app', ['ngRoute']);
+})();
