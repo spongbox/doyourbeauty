@@ -1,2 +1,1 @@
 node-sass --include-path --source-comments --source-map scss scss/main.scss css/main.min.css --output-style compressed
-node-sass --include-path --source-comments --source-map scss scss/homepage.scss css/homepage.min.css --output-style compressed
