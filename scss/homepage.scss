@@ -1,4 +1,3 @@
-@import "lib/_normalize.scss";
 main {
   position: relative;
 }
@@ -16,30 +15,6 @@ main {
   }
 }
 
-.btn {
-  display: block;
-  padding: 0.5em 1em;
-  border: 1px solid #D5D5D5;
-  background: #E4E4E4;
-  color: #454545;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: all 0.3s ease-in;
-
-  &-centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    background: #454545;
-    color: #E4E4E4;
-  }
-}
 .title {
   padding: 50px;
   margin: 0;

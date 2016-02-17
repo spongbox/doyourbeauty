@@ -2,7 +2,8 @@
 	"version": 3,
 	"file": "../css/main.min.css",
 	"sources": [
-		"main.scss"
+		"main.scss",
+		"helpers/_variables.scss"
 	],
 	"mappings": "",
 	"names": []
