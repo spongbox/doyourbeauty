@@ -30,7 +30,7 @@
             "order": 2,
             "name": "texture",
             "title": "Séléctionnez votre texture",
-            "form": "img-radio",
+            "form": "radio-slider",
             "values": [
               {
                 "value": "milk",
