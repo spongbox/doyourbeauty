@@ -1,0 +1,10 @@
+<h1>Lab</h1>
+<div ui-view></div>
+
+<div>
+  <h2>Recap</h2>
+  <p ng-repeat="choice in labVm.choices">
+    <span ng-if="!choice.name">{{choice}}</span>
+    <span ng-if="choice.name">{{choice.name}}</span>
+  </p>
+</div>

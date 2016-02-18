@@ -1,0 +1,41 @@
+{
+  "products": [
+      {
+        "order": 1,
+        "name": "cream",
+        "attributes": [
+          {
+            "order": 1,
+            "name": "skin",
+            "form": "btn-radio",
+            "value": ["dry", "oily"]
+          },
+          {
+            "order": 2,
+            "name": "texture",
+            "form": "btn-radio",
+            "value": ["fluid", "cream", "gel"]
+          },
+          {
+            "order": 3,
+            "name": "color",
+            "form": "btn-radio",
+            "value": ["red", "blue", "pink"]
+          },
+          {
+            "order": 4,
+            "name": "name",
+            "form": "input-text"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "name": "lipstick"
+      },
+      {
+        "order": 3,
+        "name": "mask"
+      }
+  ]
+}

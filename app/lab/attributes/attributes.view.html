@@ -1,0 +1,6 @@
+<div>
+  <h2>List attributes</h2>
+  <div ng-repeat="attribute in attributesVm.attributes | orderBy : 'order'"
+      ng-include="attributesVm.getForm(attribute)">
+  </div>
+</div>

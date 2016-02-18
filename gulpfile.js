@@ -7,7 +7,11 @@ var templateCache = require('gulp-angular-templatecache');
 var minifyHTML = require('gulp-minify-html');
 
 gulp.task('js', function () {
-  gulp.src(['app/app.module.js', 'app/app.routes.js', 'app/shared/**/*.js', 'app/components/**/*.js'])
+  gulp.src([
+      'app/app.module.js', 'app/core/*.module.js',
+      'app/core/*.js', 'app/blocks/**/*.module.js',
+      'app/blocks/**/*.js', 'app/**/*.module.js',
+      'app/**/*.js'])
     .pipe(sourcemaps.init())
       .pipe(concat('app.min.js'))
       .pipe(ngAnnotate())

@@ -1,3 +1,11 @@
 (function () {
-  angular.module('app', ['ngMaterial', 'ngRoute']);
+    'use strict';
+
+    angular.module('app', [
+        'app.core',
+        'app.lab',
+        'app.homepage',
+        'app.layout',
+    ]);
+
 })();

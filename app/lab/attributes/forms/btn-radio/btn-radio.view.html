@@ -1,0 +1,12 @@
+<div ng-controller="BtnRadioController as vm" ng-init="vm.attribute=attribute">
+  <h3>Btn Radio</h3>
+  <div layout="row">
+    <md-button class="md-raised"
+      ng-repeat="val in vm.attribute.value"
+      ng-class="{'md-primary': vm.choice == val}"
+      ng-click="vm.setChoice(val)"
+      >
+      {{val}}
+      </md-button>
+  </div>
+</div>

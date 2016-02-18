@@ -1,0 +1,8 @@
+<div layout="row">
+  <md-button class="md-raised"
+    ng-repeat="product in productsVm.products | orderBy : 'order'"
+    ng-click="productsVm.select(product)"
+    >
+    {{product.name}}
+  </md-button>
+</div>
