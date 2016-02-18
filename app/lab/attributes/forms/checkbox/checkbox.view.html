@@ -1,0 +1,13 @@
+<div ng-controller="CheckboxController as vm" ng-init="vm.attribute=attribute">
+  <h2>{{vm.attribute.title}}</h2>
+  <div layout="row">
+      <div ng-repeat="val in vm.attribute.values">
+
+        <md-checkbox ng-checked="vm.exists(val.value)" ng-click="vm.toggle(val.value)">
+          {{val.label}}
+        </md-checkbox>
+      </div>
+
+  </div>
+  <md-button ng-click="vm.saveChoices()" class="md-raised">Validez</md-button>
+</div>

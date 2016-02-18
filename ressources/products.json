@@ -10,7 +10,7 @@
             "order": 1,
             "name": "skin",
             "title": "Séléctionnez votre type de peau",
-            "form": "btn-radio",
+            "form": "checkbox",
             "values": [
               {
                 "value": "dry",
@@ -46,7 +46,7 @@
                 "img": "http://lorempixel.com/g/100/100/abstract/3"
               }
             ]
-          },{
+          }, {
             "order": 3,
             "name": "name",
             "title": "Nommez votre crême",
