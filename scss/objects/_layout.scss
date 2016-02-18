@@ -1,0 +1,4 @@
+.layout-static {
+  @include width();
+  margin: 0 auto;
+}

@@ -1,4 +1,4 @@
-<div ng-controller="BtnRadioController as vm" ng-init="vm.attribute=attribute">
+<div ng-controller="ImgRadioController as vm" ng-init="vm.attribute=attribute">
   <h2>{{vm.attribute.title}}</h2>
   <div layout="row">
     <md-button class="md-raised"
@@ -6,6 +6,9 @@
       ng-class="{'md-primary': vm.choice == val.value}"
       ng-click="vm.setChoice(val.value)"
       >
+      <div>
+        <img src="{{val.img}}" alt=""/>
+      </div>
       {{val.label}}
       </md-button>
   </div>

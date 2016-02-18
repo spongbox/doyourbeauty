@@ -1,10 +1,17 @@
-<h1>Lab</h1>
-<div ui-view></div>
+<section id="lab" >
+  <div ui-view
+      class="layout-static"
+      layout="column"
+      ></div>
+</section>
 
-<div>
-  <h2>Recap</h2>
-  <p ng-repeat="choice in labVm.choices">
-    <span ng-if="!choice.name">{{choice}}</span>
-    <span ng-if="choice.name">{{choice.name}}</span>
-  </p>
+
+<div style="position: fixed; right: 0; bottom: 0; width: 200px; min-height:100px; padding:10px; background: #454545;color:#fff;">
+  <span style="font-weight:bold;">Choice</span>
+  <ul ng-repeat="choice in labVm.choices" style="padding:0; margin:0; list-style:none; font-size: 12px;">
+    <li style="padding-left:10px;">
+      <span ng-if="!choice.name">{{choice}}</span>
+      <span ng-if="choice.name">{{choice.name}}</span>
+    </li>
+  </ul>
 </div>

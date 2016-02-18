@@ -3,6 +3,9 @@
     ng-repeat="product in productsVm.products | orderBy : 'order'"
     ng-click="productsVm.select(product)"
     >
-    {{product.name}}
+    <div>
+      <img src="{{product.img}}" alt="" />
+    </div>
+    {{product.title}}
   </md-button>
 </div>

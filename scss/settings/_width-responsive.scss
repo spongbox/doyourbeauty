@@ -1,0 +1,15 @@
+$widths: (
+  "desktop": 960px,
+  "mobile": 100%
+);
+
+@mixin width() {
+  @each $w in $widths {
+    $mq: nth($w, 1);
+    $value: nth($w, 2);
+
+    @include media-query($mq) {
+      max-width: $value;
+    }
+  }
+}

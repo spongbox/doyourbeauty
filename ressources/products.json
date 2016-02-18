@@ -3,39 +3,69 @@
       {
         "order": 1,
         "name": "cream",
+        "title": "Crème",
+        "img": "http://lorempixel.com/g/100/100/abstract/1",
         "attributes": [
           {
             "order": 1,
             "name": "skin",
+            "title": "Séléctionnez votre type de peau",
             "form": "btn-radio",
-            "value": ["dry", "oily"]
-          },
-          {
+            "values": [
+              {
+                "value": "dry",
+                "label": "Séche"
+              },{
+                "value": "normal",
+                "label": "Normal"
+              },{
+                "value": "combination",
+                "label": "Mixte"
+              },{
+                "value": "oily",
+                "label": "Grasse"
+              }
+            ]
+          },{
             "order": 2,
             "name": "texture",
-            "form": "btn-radio",
-            "value": ["fluid", "cream", "gel"]
-          },
-          {
+            "title": "Séléctionnez votre texture",
+            "form": "img-radio",
+            "values": [
+              {
+                "value": "milk",
+                "label": "Texture douce",
+                "img": "http://lorempixel.com/g/100/100/abstract/1"
+              },{
+                "value": "Cream",
+                "label": "Crème",
+                "img": "http://lorempixel.com/g/100/100/abstract/2"
+              },{
+                "value": "gel",
+                "label": "Gel",
+                "img": "http://lorempixel.com/g/100/100/abstract/3"
+              }
+            ]
+          },{
             "order": 3,
-            "name": "color",
-            "form": "btn-radio",
-            "value": ["red", "blue", "pink"]
-          },
-          {
-            "order": 4,
             "name": "name",
+            "title": "Nommez votre crême",
+            "label": "Insérez le nom de votre produit",
             "form": "input-text"
           }
         ]
       },
       {
         "order": 2,
-        "name": "lipstick"
+        "name": "lipstick",
+        "title": "Rouge à lévres",
+        "img": "http://lorempixel.com/g/100/100/abstract/2"
       },
       {
         "order": 3,
-        "name": "mask"
+        "name": "mask",
+        "title": "Masque",
+        "img": "http://lorempixel.com/g/100/100/abstract/3"
       }
   ]
 }

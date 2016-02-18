@@ -18,6 +18,7 @@
             $state.go('lab.products');
             return;
           }
+
           vm.attributes = $scope.labVm.choices.product.attributes;
         }
 

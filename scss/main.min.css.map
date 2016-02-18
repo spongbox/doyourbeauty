@@ -3,8 +3,10 @@
 	"file": "../css/main.min.css",
 	"sources": [
 		"main.scss",
-		"helpers/_variables.scss"
+		"settings/_responsive.scss",
+		"settings/_width-responsive.scss",
+		"objects/_layout.scss"
 	],
-	"mappings": "",
+	"mappings": "oGGAA,cAAc,AAAC,CAEb,MAAM,CAAE,MAAO,CAChB,AFuBW,MAAM,CAAN,MAAM,MAAM,SAAS,EAAE,MAAM,sGE1BzC,cAAc,AAAC,CDWT,SAAS,CAVF,KAAK,CCEjB,CFuBW,MAAM,CAAN,MAAM,MAAM,SAAS,EAAE,KAAK,sGE1BxC,cAAc,AAAC,CDWT,SAAS,CATH,IAAI,CCCf",
 	"names": []
 }
