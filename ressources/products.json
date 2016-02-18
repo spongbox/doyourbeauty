@@ -46,8 +46,28 @@
                 "img": "http://lorempixel.com/g/100/100/abstract/3"
               }
             ]
-          },{
+          }, {
             "order": 3,
+            "name": "color",
+            "title": "Choisissez une couleur",
+            "form": "color",
+            "values": [
+              {
+                "value": "red",
+                "label": "Rouge",
+                "color": "#FF0000"
+              },{
+                "value": "green",
+                "label": "Vert",
+                "color": "#00FF00"
+              },{
+                "value": "blue",
+                "label": "Rouge",
+                "color": "#0000FF"
+              }
+            ]
+          },{
+            "order": 4,
             "name": "name",
             "title": "Nommez votre crême",
             "label": "Insérez le nom de votre produit",
