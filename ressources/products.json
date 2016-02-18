@@ -9,6 +9,7 @@
           {
             "order": 1,
             "name": "skin",
+            "nameMenu": "Votre type de peau",
             "title": "Séléctionnez votre type de peau",
             "form": "btn-radio",
             "values": [
@@ -29,6 +30,7 @@
           },{
             "order": 2,
             "name": "texture",
+            "nameMenu": "Votre texture",
             "title": "Séléctionnez votre texture",
             "form": "img-radio",
             "values": [
@@ -49,6 +51,7 @@
           },{
             "order": 3,
             "name": "name",
+            "nameMenu": "Le nom de votre crême",
             "title": "Nommez votre crême",
             "label": "Insérez le nom de votre produit",
             "form": "input-text"
