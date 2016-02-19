@@ -2,3 +2,11 @@
   @include width();
   margin: 0 auto;
 }
+
+.layout-column .layout-child_spacing {
+    margin: 50px 0;
+}
+
+.layout-fluid {
+  width: 100%;
+}

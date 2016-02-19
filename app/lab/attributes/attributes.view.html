@@ -1,14 +1,14 @@
-<div>
-  <h2>List attributes</h2>
-  <div>
-    <ol>
-      <li><a href="#">Votre produit</a></li>
-      <li ng-repeat="attribute in attributesVm.attributes | orderBy : 'order'">
-        <a href="#attribute.name">{{attribute.nameMenu}}</a>
-      </li>
-    </ol>
-  </div>
+
+<nav>
+  <ol>
+    <li><a href="#">Votre produit</a></li>
+    <li ng-repeat="attribute in attributesVm.attributes | orderBy : 'order'">
+      <a href="#attribute.name">{{attribute.nameMenu}}</a>
+    </li>
+  </ol>
+</nav>
+<div layout="column" layout-align="space-between center" class="layout-static">
   <div ng-repeat="attribute in attributesVm.attributes | orderBy : 'order'"
-      ng-include="attributesVm.getForm(attribute)">
+      ng-include="attributesVm.getForm(attribute)" class="layout-child layout-child_spacing form md-whiteframe-2dp">
   </div>
 </div>
