@@ -1,7 +1,7 @@
 {
   "products": [
       {
-        "order": 1,
+        "order": 3,
         "name": "cream",
         "title": "Crème",
         "img": "http://lorempixel.com/g/100/100/abstract/1",
@@ -59,15 +59,21 @@
         ]
       },
       {
-        "order": 2,
-        "name": "lipstick",
-        "title": "Rouge à lévres",
+        "order": 1,
+        "name": "scrub",
+        "title": "Gommage",
         "img": "http://lorempixel.com/g/100/100/abstract/2"
       },
       {
-        "order": 3,
+        "order": 2,
         "name": "mask",
         "title": "Masque",
+        "img": "http://lorempixel.com/g/100/100/abstract/3"
+      },
+      {
+        "order": 4,
+        "name": "face-powder",
+        "title": "Fond de teint",
         "img": "http://lorempixel.com/g/100/100/abstract/3"
       }
   ]

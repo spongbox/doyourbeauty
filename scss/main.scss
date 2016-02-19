@@ -1,3 +1,6 @@
+// GENERIC
+@import "generic/_base.scss";
+
 // SETTINGS
 @import "settings/_responsive.scss";
 @import "settings/_width-responsive.scss";
@@ -6,6 +9,7 @@
 //OBJECTS
 @import "objects/_layout.scss";
 @import "objects/_form.scss";
+@import "objects/_pt_card.scss";
 
 //HELPERS
 
