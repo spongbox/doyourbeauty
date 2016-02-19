@@ -10,6 +10,7 @@
     function AttributesController($scope, $state) {
         var vm = this;
         vm.getForm = getForm;
+        vm.choiceValidate = choiceValidate;
 
         activate();
 
@@ -24,6 +25,10 @@
 
         function getForm(attribute) {
           return "app/lab/attributes/forms/" + attribute.form + "/" +  attribute.form + ".view.html";
+        }
+
+        function choiceValidate(attribute) {
+          return typeof $scope.labVm.choices[attribute.name] !== "undefined";
         }
     }
 
