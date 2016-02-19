@@ -22,24 +22,26 @@
   background: #fff;
   .number {
     opacity: 1;
-    transition: opacity 0.2s linear, font-size 0s 0.2s;
+    transition: opacity 0.2s 0.2s linear, font-size 0s 0.2s;
   }
   .material-icons {
     opacity: 0;
     width: 0;
     height: 0;
-    transition: opacity 0.2s 0.2s linear, width 0s 0.2s, height 0s 0.2s;
     color: #73C80E;
+    transition: opacity 0.2s linear, width 0s 0.2s, height 0s 0.2s;
   }
   &.validate {
     .number {
       opacity: 0;
       font-size: 0;
+      transition: opacity 0.2s linear, font-size 0s 0.2s;
     }
     .material-icons {
       opacity: 1;
       height: 24px;
       width: 24px;
+      transition: opacity 0.2s 0.2s linear, width 0s 0.2s, height 0s 0.2s;
     }
   }
 }
@@ -106,5 +108,32 @@
       opacity: 1;
       border-width: 5px;
     }
+  }
+}
+
+.form-input {
+  display: block;
+  text-align: center;
+  width: 400px;
+  margin: 20px auto 0;
+  label:not(.md-container-ignore) {
+    right: 0;
+    transform-origin: center center 0px !important;
+    span {
+      transition: color 0.3s ease-in;
+    }
+  }
+  input {
+    text-align: center;
+    transition: border 0.3s ease-in;
+  }
+}
+
+.form-input:not(.md-input-focused):hover {
+  label span{
+    color: rgba(0,0,0,0.7);
+  }
+  input {
+    border-color: rgba(0,0,0,0.5);
   }
 }

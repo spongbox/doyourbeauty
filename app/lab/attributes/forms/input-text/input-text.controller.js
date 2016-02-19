@@ -14,7 +14,11 @@
         vm.setChoice = setChoice;
 
         function setChoice() {
-          $scope.labVm.choices[vm.attribute.name] = vm.choice;
+          if (vm.choice !== "" && vm.choice !== null) {
+            $scope.labVm.choices[vm.attribute.name] = vm.choice;
+          } else {
+            delete $scope.labVm.choices[vm.attribute.name];
+          }
         }
     }
 
