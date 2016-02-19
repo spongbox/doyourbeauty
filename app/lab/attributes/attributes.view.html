@@ -9,6 +9,15 @@
 </nav>
 <div layout="column" layout-align="space-between center" class="layout-static">
   <div ng-repeat="attribute in attributesVm.attributes | orderBy : 'order'"
-      ng-include="attributesVm.getForm(attribute)" class="layout-child layout-child_spacing form md-whiteframe-2dp">
+       class="layout-child layout-child_spacing form md-whiteframe-2dp">
+      <span class="form-step md-whiteframe-2dp"
+            ng-class="{'validate': attributesVm.choiceValidate(attribute)}"
+          >
+            <span class="number">{{attribute.order + 1}}</span>
+            <md-icon>done</md-icon>
+      </span>
+      <h2 class="form-title">{{attribute.title}}</h2>
+      <div ng-include="attributesVm.getForm(attribute)">
+      </div>
   </div>
 </div>

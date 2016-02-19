@@ -1,15 +1,13 @@
-<div ng-controller="ImgRadioController as vm" ng-init="vm.attribute=attribute">
-  <h2>{{vm.attribute.title}}</h2>
-  <div layout="row">
-    <md-button class="md-raised"
-      ng-repeat="val in vm.attribute.values"
-      ng-class="{'md-primary': vm.choice == val.value}"
-      ng-click="vm.setChoice(val.value)"
-      >
-      <div>
-        <img src="{{val.img}}" alt=""/>
-      </div>
-      {{val.label}}
-      </md-button>
+<div ng-controller="ImgRadioController as vm" ng-init="vm.attribute=attribute" layout="row" layout-align="space-around center">
+  <div
+    class="form-btn-img"
+    ng-repeat="val in vm.attribute.values"
+    ng-class="{'is-selected': vm.choice == val.value}"
+    ng-click="vm.setChoice(val.value)"
+    >
+    <div class="img">
+      <img src="{{val.img}}" alt=""/>
+    </div>
+    <p class="label">{{val.label}}</p>
   </div>
 </div>
