@@ -27,7 +27,7 @@
             <md-icon>done</md-icon>
       </span>
       <h2 class="lab-title">{{attribute.title}}</h2>
-      <p ng-if="attribute.subtitle">
+      <p class="subtitle" ng-if="attribute.subtitle">
         {{attribute.subtitle}}
       </p>
       <div ng-include="attributesVm.getForm(attribute)">

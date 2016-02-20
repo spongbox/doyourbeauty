@@ -1,7 +1,8 @@
-<div ng-controller="CheckboxController as vm" ng-init="vm.attribute=attribute">
-  <div layout="row">
+<div ng-controller="CheckboxController as vm" ng-init="vm.attribute=attribute" class="checkboxes_container">
+  <div layout="row"
+  layout-align="space-around center">
     <div ng-repeat="val in vm.attribute.values">
-        <md-checkbox ng-checked="vm.exists(val.value)" ng-click="vm.toggle(val.value)">
+        <md-checkbox ng-checked="vm.exists(val.value)" ng-click="vm.toggle(val.value)" class="cb_custom">
           {{val.label}}
         </md-checkbox>
       </div>

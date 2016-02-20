@@ -10,10 +10,14 @@
     opacity: 0.75;
     border-radius: 50%;
     transition: opacity 0.3s linear;
-    img {
+    img, > div {
+      @include border-box;
       width: 100%;
       height: 100%;
       border-radius: 50%;
+        &#form-color-white{
+          border: 1px solid $lightgrey;
+        }
     }
   }
   .label {
@@ -21,7 +25,12 @@
     font-size: 14px;
     font-weight: bold;
   }
-
+  .info{
+    font-size: 14px;
+    font-weight: 100;
+    margin: 2px 0 0;
+    padding: 0 5px;
+  }
   &.small {
     .img {
       width: 50px;
@@ -49,7 +58,7 @@
       border-radius: 50%;
       box-sizing: border-box;
       opacity: 0;
-      border: 0px solid #73C80E;
+      border: 0px solid $main-color;
       transition: opacity 0.3s linear, border 0.3s ease-in;
       z-index: 1;
     }
@@ -64,6 +73,24 @@
     .img:after {
       opacity: 1;
       border-width: 5px;
+    }
+  }
+}
+
+.layout_container{
+  text-align: center;
+  .img-circle {
+    display: inline-block;
+    margin: 10px 0;
+    vertical-align: top;
+    width: 33.33%;
+    &.small-circle{
+      width: 20%;
+      .img{
+        height: 118px;
+        padding: 5px;
+        width: 118px;
+      }
     }
   }
 }

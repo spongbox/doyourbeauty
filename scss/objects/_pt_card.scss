@@ -4,7 +4,7 @@
     width: 100%;
     text-align: center;
 	.pt_card {
-		background: #fff none repeat scroll 0 0;
+		background: $white none repeat scroll 0 0;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-o-box-sizing: border-box;
@@ -24,7 +24,7 @@
 	    	}
 	    }
 		.pt_name{
-			color: #00A19A;
+			color: $main-color;
 			margin-top: 15px;
 		}
 	}

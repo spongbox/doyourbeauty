@@ -1,25 +1,31 @@
 #lab {
-  background: pink;
+  background: rgba(0, 0, 0, 0) url("../../img/bg.jpg") no-repeat fixed 0 0 / 100% auto;
+  color: $main-color;
+  .lab-title {
+    text-align: center;
+    margin: 10px 0 25px;
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+  }
+  .lab-title-2 {
+    margin: 40px 0 10px;
+  }
+  .subtitle{
+    font-size: 14px;
+    margin: -20px 0 25px;
+  }
 }
-
-.lab-title {
-  text-align: center;
-  margin: 10px 0 25px;
-  font-size: 20px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: lighter;
-}
-
 .lab-step{
   display: block;
-  color: rgb(87, 87, 87);
+  color: $grey;
   font-size: 18px;
   line-height: 2em;
   width: 2em;
   height: 2em;
   text-align: center;
   border-radius: 50%;
-  background: #fff;
+  background: $white;
   .number {
     opacity: 1;
     transition: opacity 0.2s 0.2s linear, font-size 0s 0.2s;
@@ -28,7 +34,7 @@
     opacity: 0;
     width: 0;
     height: 0;
-    color: #73C80E;
+    color: $main-color;
     transition: opacity 0.2s linear, width 0s 0.2s, height 0s 0.2s;
   }
   &.validate {

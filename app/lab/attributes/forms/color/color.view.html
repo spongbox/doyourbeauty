@@ -1,17 +1,17 @@
 <div ng-controller="ColorController as vm" ng-init="vm.attribute=attribute">
-  <div layout="row">
-    <md-button class="md-raised"
+  <div class="layout_container">
+    <div class="img-circle img-circle-btn small-circle"
       ng-repeat="val in vm.attribute.values"
-      ng-class="{'md-primary': vm.choice == val.value}"
+      ng-class="{'is-selected': vm.choice == val.value}"
       ng-click="vm.setChoice(val.value)"
       >
-      <div style="background: #fff;">
-        <div id="form-color-{{val.value}}" style="height:50px; background: {{val.color}};"></div>
+      <div class="img">
+        <div id="form-color-{{val.value}}" style="background: {{val.color}};"></div>
       </div>
-      {{val.label}}
-      </md-button>
+      <p class="label">{{val.label}}</p>
+    </div>
   </div>
-  <h2>{{vm.attribute.sliderLabel}}</h2>
+  <h2 class="lab-title lab-title-2">{{vm.attribute.sliderLabel}}</h2>
   <md-slider md-discrete ng-disabled="vm.choice == null" ng-model="vm.percent" min="0" max="100" ng-change="vm.setOpacity()"></md-slider>
   <md-button ng-click="vm.saveChoice()" class="md-raised">{{vm.attribute.labelValidate}}</md-button>
 </div>

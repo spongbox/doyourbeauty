@@ -1,10 +1,13 @@
+//HELPERS
+@import "helpers/_helpers.scss";
+
 // GENERIC
 @import "generic/_base.scss";
 
 // SETTINGS
 @import "settings/_responsive.scss";
 @import "settings/_width-responsive.scss";
-//GENERIC
+
 
 //OBJECTS
 @import "objects/_button.scss";
@@ -12,8 +15,8 @@
 @import "objects/_form.scss";
 @import "objects/_pt_card.scss";
 @import "objects/_img-circle.scss";
-
-//HELPERS
+@import "objects/_checkbox.scss";
+@import "objects/_slider.scss";
 
 
 //COMPONENTS

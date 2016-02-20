@@ -1,0 +1,44 @@
+.checkboxes_container{
+	text-align: center;
+	md-checkbox.cb_custom{
+		.md-container{
+			display: block;
+		    margin: 0 auto 10px;
+		    position: relative;
+		    top: 0;
+		    transform: none;
+		    width: 40px;
+		    height: 40px;
+		}
+		.md-icon{
+			border: 0;
+			background: #fff;
+			-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+			-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+			-o-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+			-ms-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+			box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+			width: 40px;
+			height: 40px;
+			&:after {
+				background: $main-color none repeat scroll 0 0;
+			    border: 0 none;
+			    height: 80%;
+			    left: 50%;
+			    margin: -40%;
+			    top: 50%;
+			    transform: none;
+			    width: 80%;
+			}
+		}
+		.md-label{
+			margin: 0;
+			color: $grey;
+		}
+		&.md-checked{
+			.md-icon {
+				background: $white;
+			}
+		}
+	}
+}

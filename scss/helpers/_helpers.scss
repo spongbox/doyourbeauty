@@ -1,0 +1,16 @@
+// Font
+$font-stack:    Helvetica, Arial, sans-serif;
+
+// Colors
+$main-color: #00A19A;
+$grey: #575756;
+$lightgrey: #ededed;
+$white: #fff;
+
+@mixin border-box(){
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
