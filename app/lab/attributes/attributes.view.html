@@ -1,9 +1,20 @@
 
 <nav>
   <ol>
-    <li><a href="#">Votre produit</a></li>
-    <li ng-repeat="attribute in attributesVm.attributes | orderBy : 'order'">
-      <a href="#attribute.name">{{attribute.nameMenu}}</a>
+    <li class="first-step step-ok"><a href="#">
+      <span class="lab-step validate"><md-icon>done</md-icon></span>
+      <span class="lab-step-label">Votre produit</span></a></li>
+    <li ng-repeat="attribute in attributesVm.attributes | orderBy : 'order'" 
+    ng-class="{'step-ok': attributesVm.choiceValidate(attribute)}"
+    class="round-step">
+      <a href="#attribute.name">
+      <span class="lab-step"
+            ng-class="{'validate': attributesVm.choiceValidate(attribute)}"
+          >
+            <span class="number">{{attribute.order + 1}}</span>
+            <md-icon>done</md-icon>
+      </span>
+      <span class="lab-step-label">{{attribute.nameMenu}}</span></a>
     </li>
   </ol>
 </nav>
