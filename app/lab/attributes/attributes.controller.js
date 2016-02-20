@@ -28,8 +28,8 @@
           return "app/lab/attributes/forms/" + attribute.form + "/" +  attribute.form + ".view.html";
         }
 
-        function getResultView(attribute) {
-          return "app/lab/attributes/forms/" + attribute.form + "/" +  attribute.form + ".view.html";
+        function getResultView(product) {
+          return "app/lab/attributes/results/" + product.name + "/" + product.name + ".view.html";
         }
 
         function choiceValidate(attribute) {

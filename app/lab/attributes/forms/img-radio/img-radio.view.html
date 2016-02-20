@@ -1,9 +1,9 @@
 <div ng-controller="ImgRadioController as vm" ng-init="vm.attribute=attribute" layout="row" layout-align="space-around center">
   <div
-    class="form-btn-img"
+    class="img-circle img-circle-btn"
     ng-repeat="val in vm.attribute.values"
-    ng-class="{'is-selected': vm.choice == val.value}"
-    ng-click="vm.setChoice(val.value)"
+    ng-class="{'is-selected': vm.choice.value == val.value}"
+    ng-click="vm.setChoice(val)"
     >
     <div class="img">
       <img src="{{val.img}}" alt=""/>
