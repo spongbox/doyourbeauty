@@ -31,28 +31,50 @@
             "order": 2,
             "name": "texture",
             "nameMenu": "Votre texture",
-            "title": "Séléctionnez votre texture",
+            "title": "La texture de ma crème",
             "form": "img-radio",
             "values": [
               {
-                "value": "milk",
-                "label": "Texture douce",
+                "value": "gel",
+                "label": "Texture gel",
+                "info": "pour une sensation de fraicheur",
                 "img": "http://lorempixel.com/g/100/100/abstract/1"
               },{
                 "value": "Cream",
-                "label": "Crème",
+                "label": "Texture mousse",
+                "info": "pour une sensation de légèreté",
                 "img": "http://lorempixel.com/g/100/100/abstract/2"
               },{
-                "value": "gel",
-                "label": "Gel",
+                "value": "Texture crème",
+                "label": "pour une sensation de confort",
                 "img": "http://lorempixel.com/g/100/100/abstract/3"
               }
             ]
-          },{
+          }, {
             "order": 3,
+            "name": "color",
+            "title": "Choisissez une couleur",
+            "form": "color",
+            "values": [
+              {
+                "value": "red",
+                "label": "Rouge",
+                "color": "#FF0000"
+              },{
+                "value": "green",
+                "label": "Vert",
+                "color": "#00FF00"
+              },{
+                "value": "blue",
+                "label": "Rouge",
+                "color": "#0000FF"
+              }
+            ]
+          },{
+            "order": 4,
             "name": "name",
             "nameMenu": "Le nom de votre crême",
-            "title": "Nommez votre crême",
+            "title": "Nommez ma crême",
             "label": "Insérez le nom de votre produit",
             "form": "input-text"
           }
