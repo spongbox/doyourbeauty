@@ -1,14 +1,13 @@
-
 <nav>
   <ol>
     <li><a href="#">Votre produit</a></li>
-    <li ng-repeat="attribute in attributesVm.attributes | orderBy : 'order'">
+    <li ng-repeat="attribute in attributesVm.product.attributes | orderBy : 'order'">
       <a href="#attribute.name">{{attribute.nameMenu}}</a>
     </li>
   </ol>
 </nav>
 <div layout="column" layout-align="space-between center" class="layout-static">
-  <div ng-repeat="attribute in attributesVm.attributes | orderBy : 'order'"
+  <div ng-repeat="attribute in attributesVm.product.attributes | orderBy : 'order'"
        class="layout-child layout-child_spacing form md-whiteframe-2dp">
       <span class="form-step md-whiteframe-2dp"
             ng-class="{'validate': attributesVm.choiceValidate(attribute)}"
@@ -16,8 +15,11 @@
             <span class="number">{{attribute.order + 1}}</span>
             <md-icon>done</md-icon>
       </span>
-      <h2 class="form-title">{{attribute.title}}</h2>
+      <h2 class="lab-title">{{attribute.title}}</h2>
       <div ng-include="attributesVm.getForm(attribute)">
       </div>
+  </div>
+  <div class="layout-child layout-child_spacing form md-whiteframe-2dp">
+    <div ng-include="attributesVm.getResultView(attributesVm.product)"></div>
   </div>
 </div>

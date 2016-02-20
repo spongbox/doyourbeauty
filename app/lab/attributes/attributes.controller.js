@@ -10,6 +10,7 @@
     function AttributesController($scope, $state) {
         var vm = this;
         vm.getForm = getForm;
+        vm.getResultView = getResultView;
         vm.choiceValidate = choiceValidate;
 
         activate();
@@ -20,11 +21,15 @@
             return;
           }
 
-          vm.attributes = $scope.labVm.choices.product.attributes;
+          vm.product = $scope.labVm.choices.product;
         }
 
         function getForm(attribute) {
           return "app/lab/attributes/forms/" + attribute.form + "/" +  attribute.form + ".view.html";
+        }
+
+        function getResultView(product) {
+          return "app/lab/attributes/results/" + product.name + "/" + product.name + ".view.html";
         }
 
         function choiceValidate(attribute) {

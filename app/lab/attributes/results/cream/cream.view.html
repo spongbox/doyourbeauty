@@ -1,0 +1,28 @@
+<div ng-controller="CreamController as vm" ng-init="vm.cream=labVm.choices">
+  <h2 class="lab-title">Félicitation vous avez créé votre crème!</h2>
+  <div class="layout-static-small" layout="row" layout-align="space-between center">
+    <div class="img-circle small">
+      <div class="img">
+        <img src="{{vm.cream.texture.img}}" alt=""/>
+      </div>
+      <p class="label">{{vm.cream.texture.label}}</p>
+    </div>
+    <div class="img-circle small">
+      <div class="img">
+        <img src="{{vm.cream.texture.img}}" alt=""/>
+      </div>
+      <p class="label">{{vm.cream.texture.label}}</p>
+    </div>
+    <div class="img-circle small">
+      <div class="img">
+        <img src="{{vm.cream.texture.img}}" alt=""/>
+      </div>
+      <p class="label">{{vm.cream.texture.label}}</p>
+    </div>
+  </div>
+  <div layout="column">
+    <md-button class="md-raised">Sauvegarder ma crème</md-button>
+    <md-button class="md-raised">Déplacer ma crème dans mon panier d'achat</md-button>
+    <md-button class="md-raised">Continuer vers la personnalisation de mon packaging</md-button>
+  </div>
+</div>
