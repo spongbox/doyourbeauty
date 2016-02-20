@@ -9,6 +9,7 @@
 		    transform: none;
 		    width: 40px;
 		    height: 40px;
+		    color: $main-color;
 		}
 		.md-icon{
 			border: 0;
@@ -36,8 +37,16 @@
 			color: $grey;
 		}
 		&.md-checked{
+			.md-ink-ripple{
+				color: $main-color;
+			}
 			.md-icon {
 				background: $white;
+			}
+		}
+		&.md-focused{
+			.md-container{
+				background: transparent;
 			}
 		}
 	}

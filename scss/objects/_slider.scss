@@ -6,6 +6,10 @@ md-slider{
 		}
 		.md-track{
 			border-radius: 25px;
+			background: $lightgrey;
+			&.md-track-fill{
+				background: $main-color;
+			}
 		}
 		.md-track-ticks{
 			opacity: 0;
@@ -30,6 +34,10 @@ md-slider{
 		.md-sign {
 			left: -22px;
 			top: -17px;
+			background: $main-color;
+			&:after{
+				border-top-color: $main-color;
+			}
 		}
 	}
 }
