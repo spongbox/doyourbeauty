@@ -11,7 +11,7 @@
             "name": "skin",
             "nameMenu": "Votre type de peau",
             "title": "Séléctionnez votre type de peau",
-            "form": "btn-radio",
+            "form": "checkbox",
             "values": [
               {
                 "value": "dry",
