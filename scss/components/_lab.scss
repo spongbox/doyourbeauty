@@ -1,10 +1,47 @@
 #lab {
   background: pink;
 }
+
 .lab-title {
   text-align: center;
   margin: 10px 0 25px;
   font-size: 20px;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: lighter;
+}
+
+.lab-step{
+  display: block;
+  color: rgb(87, 87, 87);
+  font-size: 18px;
+  line-height: 2em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+  .number {
+    opacity: 1;
+    transition: opacity 0.2s 0.2s linear, font-size 0s 0.2s;
+  }
+  .material-icons {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    color: #73C80E;
+    transition: opacity 0.2s linear, width 0s 0.2s, height 0s 0.2s;
+  }
+  &.validate {
+    .number {
+      opacity: 0;
+      font-size: 0;
+      transition: opacity 0.2s linear, font-size 0s 0.2s;
+    }
+    .material-icons {
+      opacity: 1;
+      height: 24px;
+      width: 24px;
+      transition: opacity 0.2s 0.2s linear, width 0s 0.2s, height 0s 0.2s;
+    }
+  }
 }
