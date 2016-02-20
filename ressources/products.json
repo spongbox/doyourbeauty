@@ -30,9 +30,14 @@
           },{
             "order": 2,
             "name": "texture",
+<<<<<<< HEAD
             "nameMenu": "Votre texture",
             "title": "La texture de ma crème",
             "form": "img-radio",
+=======
+            "title": "Séléctionnez votre texture",
+            "form": "radio-slider",
+>>>>>>> feature/form-radio-slider
             "values": [
               {
                 "value": "gel",
