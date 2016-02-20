@@ -1,9 +1,16 @@
-<div ng-controller="BtnRadioController as vm" ng-init="vm.attribute=attribute"layout="row" layout-align="space-around center">
+<div ng-controller="BtnRadioController as vm" ng-init="vm.attribute=attribute" >
+  <div ng-if="vm.attribute.haveImgPreview">
+    <img src="{{vm.imgPreview}}" alt="" />
+  </div>
+<div layout="row" layout-align="space-around center" ng-init="vm.setDefault(vm.attribute.default)">
   <md-button class="md-raised form-btn"
     ng-repeat="val in vm.attribute.values"
-    ng-class="{'md-primary': vm.choice == val.value}"
-    ng-click="vm.setChoice(val.value)"
+    ng-class="{'md-primary': vm.choice.value == val.value}"
+    ng-mouseover="vm.setImgPreview(val.img)"
+    ng-mouseout="vm.setImgPreview(vm.choice.img)"
+    ng-click="vm.setChoice(val)"
     >
     {{val.label}}
     </md-button>
+</div>
 </div>

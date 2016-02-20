@@ -1,6 +1,7 @@
 <div ng-controller="InputTextController as vm" ng-init="vm.attribute=attribute">
     <md-input-container class="form-input">
       <label><span>{{vm.attribute.label}}</span></label>
-      <input ng-model="vm.choice" ng-blur="vm.setChoice()"/>
+      <input ng-model="vm.choice"/>
     </md-input-container>
+    <md-button class="md-raised" ng-click="vm.setChoice()">{{vm.attribute.labelValidate}}</md-button>
 </div>

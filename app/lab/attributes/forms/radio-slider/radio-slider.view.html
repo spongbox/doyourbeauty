@@ -1,5 +1,4 @@
 <div ng-controller="RadioSliderController as vm" ng-init="vm.attribute=attribute">
-  <h2>{{vm.attribute.title}}</h2>
   <div layout="row">
     <md-button class="md-raised"
       ng-repeat="val in vm.attribute.values"
@@ -10,6 +9,7 @@
       {{val.label}}
       </md-button>
   </div>
+  <h2>{{vm.attribute.sliderLabel}}</h2>
   <md-slider md-discrete ng-disabled="vm.choice == null" ng-model="vm.percent" min="0" max="100" ng-change="vm.setOpacity()"></md-slider>
-  <md-button ng-click="vm.saveChoice()" class="md-raised">Validez la couleur</md-button>
+  <md-button ng-click="vm.saveChoice()" class="md-raised">{{vm.attribute.labelValidate}}</md-button>
 </div>
