@@ -1,0 +1,130 @@
+footer#footer{
+	@include border-box;
+	background: $black;
+	padding: 60px 5px 30px;
+	width: 100%;
+	font-size: 14px;
+	text-align: center;
+	a {
+		color: $grey;
+		@include transition;
+		&:hover{
+			color: $white;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li{
+		list-style: none;
+		line-height: 20px;
+		}
+	}
+	.footer-left, .footer-center, .footer-right{
+		display: inline-block;
+	    margin-right: 80px;
+	    max-width: 33.333%;
+	    text-align: left;
+	    vertical-align: top;
+	}
+	.footer-right{
+		margin: 0;
+		padding-right: 90px;
+		ul.footer-social{
+			li{
+				display: inline-block;
+			    margin-right: 5px;
+			    vertical-align: top;
+			    width: 28px;
+			    opacity: 0.5;
+			    line-height: normal;
+			    @include transition;
+			    &:hover{
+			    	opacity: 1;
+			    }
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		md-input-container {
+	    	font-size: 12px;
+		    text-align: left;
+		    width: 198px;
+		    margin-top: 15px;
+		    display: inline-block;
+		    vertical-align: middle;
+		    opacity: 0.7;
+		    @include transition;
+	    	label{
+	    		color: $white;
+	    	}
+	    	.md-input{
+	    		border-color: $white;
+	    		color: $white;
+	    		text-align: left;
+	    	}
+	    	&:hover, &.md-input-focused{
+	    		opacity: 1;
+	    		label span{color: $white;}
+	    	}
+	    }
+	    .news-btn{
+	    	line-height: 24px;
+		    margin: 0;
+		    min-height: auto;
+		    position: absolute;
+		    right: -90px;
+		    top: 8px;
+		    @include transition;
+		    &:hover{
+		    	opacity: 0.95;
+		    }
+	    }
+	}
+	.footer-mention {
+	    display: inline-block;
+	    margin-top: 48px;
+	    text-align: center;
+	    width: 100%;
+	}
+}
+
+@media screen and (max-width: 740px){
+	footer#footer{
+		.footer-center{
+			margin-right: 0;
+		}
+		.footer-right{
+			display: block;
+    		margin: 30px auto 0;
+		}
+		.footer-mention{
+			margin-top: 38px;
+		}
+	}
+}
+@media screen and (max-width: 480px){
+	footer#footer{
+		.footer-left, .footer-center{
+			display: block;
+		    margin: 0 auto;
+		    max-width: 128px;
+		}
+		.footer-right{
+			margin-top: 10px;
+		    max-width: 200px;
+		    padding-right: 0;
+			.news-btn{
+				left: 0;
+			    line-height: 26px;
+			    position: relative;
+			    width: 100%;
+			}
+		}
+		.footer-mention{
+			margin-top: 23px;
+		}
+	}
+}
