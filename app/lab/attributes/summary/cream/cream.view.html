@@ -46,12 +46,12 @@
   <p class="preview-legend">
     {{vm.cream.name}}
   </p>
-  <div layout="column" layout-align="between-space center" ng-if="!attributesVm.isFinish()">
-    <md-button ng-click="vm.goToTop()" class="md-raised form-validate">Remonter à la 1er étapes</md-button>
+  <div layout="column" layout-align="center center" ng-if="!attributesVm.isFinish()">
+    <md-button ng-click="vm.goToTop()" class="md-raised">Remonter à la 1er étapes</md-button>
   </div>
-  <div layout="column" layout-align="between-space center" ng-if="attributesVm.isFinish()">
-    <md-button class="md-raised">Sauvegarder ma crème</md-button>
-    <md-button class="md-raised">Déplacer ma crème dans mon panier d'achat</md-button>
-    <md-button class="md-raised">Continuer vers la personnalisation de mon packaging</md-button>
+  <div layout="column" layout-align="center center" ng-if="attributesVm.isFinish()">
+    <md-button class="md-raised static-width">Sauvegarder ma crème</md-button>
+    <md-button class="md-raised static-width">Déplacer ma crème dans mon panier d'achat</md-button>
+    <md-button class="md-raised static-width">Continuer vers la personnalisation de mon packaging</md-button>
   </div>
 </div>
