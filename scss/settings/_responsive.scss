@@ -1,6 +1,8 @@
 $breakpoints: (
     "desktop"      "screen and (min-width: 1280px)",
     "mobile"       "screen and (max-width: 740px)",
+    "portraitTablet"   "screen and (max-width: 800px)",
+    "mobile"       "screen and (max-width: 740px)",
     "retina"       "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
 );
 

@@ -6,6 +6,7 @@ $main-color: #73C81E;
 $grey: #575756;
 $lightgrey: #ededed;
 $white: #fff;
+$black: #000;
 
 @mixin border-box(){
 	-webkit-box-sizing: border-box;
@@ -13,4 +14,12 @@ $white: #fff;
 	-o-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+@mixin transition(){
+	-webkit-transition: all 300ms ease-in-out 0ms;
+	-moz-transition: all 300ms ease-in-out 0ms;
+	-o-transition: all 300ms ease-in-out 0ms;
+	-ms-transition: all 300ms ease-in-out 0ms;
+	transition: all 300ms ease-in-out 0ms;
 }

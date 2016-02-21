@@ -4,7 +4,7 @@
         "order": 3,
         "name": "cream",
         "title": "Crème",
-        "img": "http://lorempixel.com/g/100/100/abstract/1",
+        "img": "http://lorempixel.com/g/300/350/abstract/1",
         "attributes": [
           {
             "order": 1,
@@ -87,22 +87,22 @@
               {
                 "value": "peach",
                 "label": "Pêche",
-                "color": "#FF0000"
+                "color": "#FDE9CC"
               },{
                 "value": "avocado",
                 "label": "Avocat",
-                "color": "#00FF00"
+                "color": "#E8F2CE"
               },{
                 "value": "lychee",
                 "label": "Litchi",
-                "color": "#0000FF"
+                "color": "#F3DEE6"
               },{
                 "value": "fig",
                 "label": "Figue",
-                "color": "#F0F000"
+                "color": "#F0FAFF"
               },{
-                "value": "white",
-                "label": "Blanc",
+                "value": "coconut",
+                "label": "Noix de coco",
                 "color": "#FFFFFF"
               }
             ]
@@ -179,19 +179,19 @@
         "order": 1,
         "name": "scrub",
         "title": "Gommage",
-        "img": "http://lorempixel.com/g/100/100/abstract/2"
+        "img": "http://lorempixel.com/g/300/350/abstract/2"
       },
       {
         "order": 2,
         "name": "mask",
         "title": "Masque",
-        "img": "http://lorempixel.com/g/100/100/abstract/3"
+        "img": "http://lorempixel.com/g/300/350/abstract/3"
       },
       {
         "order": 4,
         "name": "face-powder",
         "title": "Fond de teint",
-        "img": "http://lorempixel.com/g/100/100/abstract/3"
+        "img": "http://lorempixel.com/g/300/350/abstract/3"
       }
   ]
 }

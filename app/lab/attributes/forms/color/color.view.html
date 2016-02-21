@@ -7,11 +7,12 @@
       >
       <div class="img">
         <div id="form-color-{{val.value}}" style="background: {{val.color}};"></div>
+        <!--<div id="form-color-{{val.value}}" style="background: url(img/colors/cream-{{val.value}}.png);"></div>-->
       </div>
       <p class="label">{{val.label}}</p>
     </div>
   </div>
-  <h2 class="lab-title lab-title-2">{{vm.attribute.sliderLabel}}</h2>
-  <md-slider md-discrete ng-disabled="vm.choice == null" ng-model="vm.percent" min="0" max="100" ng-change="vm.setOpacity()"></md-slider>
-  <md-button ng-click="vm.saveChoice()" class="md-raised">{{vm.attribute.labelValidate}}</md-button>
+  <p class="form-label-title">{{vm.attribute.sliderLabel}}</p>
+  <md-slider md-discrete ng-disabled="vm.choice == null" ng-model="vm.percent" min="0" max="100" ng-change="vm.setOpacity()" aria-label="{{vm.attribute.sliderLabel}}"></md-slider>
+  <md-button ng-click="vm.saveChoice()" class="md-raised form-validate">{{vm.attribute.labelValidate}}</md-button>
 </div>

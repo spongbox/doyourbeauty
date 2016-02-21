@@ -25,13 +25,19 @@
       <span class="number">{{attribute.order + 1}}</span>
       <md-icon>done</md-icon>
     </span>
-    <h2 class="lab-title">{{attribute.title}}</h2>
-    <p class="subtitle" ng-if="attribute.subtitle">
-      {{attribute.subtitle}}
-    </p>
+    <header class="form-header">
+      <h2 class="form-header-title">{{attribute.title}}</h2>
+      <p class="form-header-subtitle" ng-if="attribute.subtitle">
+        {{attribute.subtitle}}
+      </p>
+    </header>
+
     <div ng-include="attributesVm.getForm(attribute)"></div>
   </div>
   <div class="layout-child layout-child_spacing form md-whiteframe-2dp" ng-if="attributesVm.product">
     <div ng-include="attributesVm.getResultView(attributesVm.product)"></div>
+  </div>
+  <div class="logo">
+    <img src="img/logo_white.svg">
   </div>
 </div>

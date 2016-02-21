@@ -1,3 +1,17 @@
-<div ng-controller="HeaderController as header">
-  {{header.title}}
-</div>
+<header id="header" ng-class="{'small': smallHeader}">
+  <div class="header-left">
+  	<a href="#"><img src="img/pic-home.svg"></a>
+  </div>
+  <div class="header-center">
+  	<img src="img/logo_white.svg">
+  </div>
+  <div class="header-right">
+  	<a href="#" class="header-link">Connexion</a>
+	<md-input-container class="form-input">
+      <label><span>Rechercher sur le site</span></label>
+      <input ng-model="vm.choice"/>
+      <button class="search-btn">Rechercher</button>
+    </md-input-container>
+  		<!-- <span><img src="img/pic-search.svg"></span> -->
+  </div>
+</header>

@@ -1,19 +1,12 @@
 #lab {
-  background: rgba(0, 0, 0, 0) url("../../img/bg.jpg") no-repeat fixed 0 0 / 100% auto;
   color: $main-color;
-  .lab-title {
-    text-align: center;
-    margin: 10px 0 25px;
-    font-size: 20px;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: lighter;
-  }
-  .lab-title-2 {
-    margin: 40px 0 10px;
-  }
-  .subtitle{
-    font-size: 14px;
-    margin: -20px 0 25px;
+
+  .logo {
+    width: 306px;
+    margin-bottom: 50px;
+    img {
+      width: 100%;
+    }
   }
 }
 .lab-step{
@@ -35,7 +28,7 @@
     width: 0;
     height: 0;
     color: $main-color;
-    transition: opacity 0.2s linear, width 0s 0.2s, height 0s 0.2s;
+    transition: opacity 0.2s linear, width 0s 0.2s, height 0s 0.2s, color 0.3s ease-in-out;
   }
   &.validate {
     .number {
@@ -47,7 +40,7 @@
       opacity: 1;
       height: 24px;
       width: 24px;
-      transition: opacity 0.2s 0.2s linear, width 0s 0.2s, height 0s 0.2s;
+      transition: opacity 0.2s 0.2s linear, width 0s 0.2s, height 0s 0.2s, color 0.3s ease-in-out;
     }
   }
 }

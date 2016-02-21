@@ -5,17 +5,19 @@
         .module('app.lab.attributes')
         .controller('AttributesController', AttributesController);
 
-    AttributesController.$inject = ['$scope', '$state', '$filter', '$window', '$document'];
+    AttributesController.$inject = ['$scope', '$state', '$filter', '$rootScope','$window', '$document'];
     /* @ngInject */
-    function AttributesController($scope, $state, $filter, $window, $document) {
+    function AttributesController($scope, $state, $filter, $rootScope, $window, $document) {
         var vm = this;
         vm.product = null;
         vm.attributes = [];
+        vm.offset = 218;
         vm.getForm = getForm;
         vm.getResultView = getResultView;
         vm.choiceValidate = choiceValidate;
         vm.render = render;
         vm.goToNext = goToNext;
+
 
         $window.addEventListener("scroll", checkPos);
 
@@ -26,6 +28,7 @@
             $state.go('lab.products');
             return;
           }
+          $rootScope.smallHeader = true;
           vm.product = $scope.labVm.choices.product;
           vm.attributes = $filter('orderBy')(vm.product.attributes, 'order');
           vm.current = vm.attributes[0];
@@ -44,16 +47,28 @@
         }
 
         function checkPos(e) {
-          var i = vm.attributes.length;
+          var i = 0;
           var notFound = true;
-          while (i > 0 && notFound) {
-            if (document.getElementById(vm.attributes[i-1].name) && document.getElementById(vm.attributes[i-1].name).offsetTop - 200 <= $window.pageYOffset) {
-              vm.current = vm.attributes[i-1];
-              notFound = false;
-              $scope.$apply();
+          var lastAttribute =  vm.attributes[0];
+          while (i < vm.attributes.length && notFound) {
+            var elemnt = angular.element(document.getElementById(vm.attributes[i].name));
+            var posStart = elemnt.prop('offsetTop') - vm.offset - 5;
+            var posEnd = elemnt.prop('offsetTop') + elemnt[0].offsetHeight - vm.offset - 5;
+            if ($document.scrollTop() >= posStart) {
+              if ($document.scrollTop() <= posEnd) {
+                vm.current = vm.attributes[i];
+                notFound = false;
+              } else {
+                lastAttribute = vm.attributes[i + 1];
+              }
             }
-            i--;
+            i++;
           }
+          if (notFound) {
+              vm.current = lastAttribute;
+          }
+          $scope.$apply();
+
         }
 
         function render(attribute) {
@@ -68,7 +83,7 @@
         }
 
         function goTo(elmnt) {
-          $document.scrollToElement(elmnt, 180, 1000);
+          $document.scrollToElement(elmnt, vm.offset, 1000);
         }
 
         $scope.$on("$destroy", function() {

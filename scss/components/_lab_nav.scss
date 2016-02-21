@@ -1,16 +1,16 @@
 #lab {
 	nav {
 		left: 20px;
-	    position: fixed;
-	    top: 20px;
+    position: fixed;
+    top: 218px;
 		ol{
 			margin: 0;
 			padding: 15px 0;
 			li{
 				list-style: none;
-				margin-bottom: 10px;
+				margin-bottom: 20px;
 				opacity: 0.4;
-				-wbekit-transition: all 300ms ease-in-out 0s;
+				-webkit-transition: all 300ms ease-in-out 0s;
 				-moz-transition: all 300ms ease-in-out 0s;
 				-o-transition: all 300ms ease-in-out 0s;
 				-ms-transition: all 300ms ease-in-out 0s;
@@ -21,11 +21,14 @@
 				.lab-step{
 					display: inline-block;
 					vertical-align: middle;
+					transition: all 300ms ease-in-out 0s;
 				}
 				.lab-step-label{
 					display: inline-block;
+					margin-left: 10px;
 					vertical-align: middle;
 					color: $white;
+					transition: all 300ms ease-in-out 0s;
 				}
 				&.first-step{
 					.lab-step{
@@ -54,6 +57,9 @@
 						-ms-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
 						box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
 						background: $main-color;
+						.material-icons {
+							color: #000;
+						}
 					}
 				}
 				&.step-ok{

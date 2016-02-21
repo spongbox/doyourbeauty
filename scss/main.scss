@@ -1,13 +1,12 @@
 //HELPERS
 @import "helpers/_helpers.scss";
 
-// GENERIC
-@import "generic/_base.scss";
-
 // SETTINGS
 @import "settings/_responsive.scss";
 @import "settings/_width-responsive.scss";
 
+// GENERIC
+@import "generic/_base.scss";
 
 //OBJECTS
 @import "objects/_button.scss";
@@ -22,3 +21,5 @@
 //COMPONENTS
 @import "components/_lab.scss";
 @import "components/_lab_nav.scss";
+@import "components/_header.scss";
+@import "components/_footer.scss";
