@@ -18,6 +18,9 @@
       border: 1px solid $lightgrey;
     }
   }
+  .img.visible {
+    opacity: 1;
+  }
   .label {
     margin: 10px 0 0;
     font-size: 14px;
@@ -38,6 +41,11 @@
     .label {
       font-size: 11px;
     }
+  }
+  &.spacing {
+    width: 80px;
+    display: inline-block;
+    margin: 0 20px 20px;
   }
 }
 

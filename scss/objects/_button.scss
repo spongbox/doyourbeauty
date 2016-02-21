@@ -12,4 +12,7 @@
     color: $white;
     box-shadow: none !important;
   }
+  &.static-width {
+    width: 450px;
+  }
 }

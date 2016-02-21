@@ -2,10 +2,10 @@
   <div class="layout_container">
     <div class="img-circle img-circle-btn small-circle"
       ng-repeat="val in vm.attribute.values"
-      ng-class="{'is-selected': vm.choice == val.value}"
-      ng-click="vm.setChoice(val.value)"
+      ng-class="{'is-selected': vm.choice.value == val.value}"
+      ng-click="vm.setChoice(val)"
       >
-      <div class="img">
+      <div class="img visible">
         <div id="form-color-{{val.value}}" style="background: {{val.color}};"></div>
         <!--<div id="form-color-{{val.value}}" style="background: url(img/colors/cream-{{val.value}}.png);"></div>-->
       </div>

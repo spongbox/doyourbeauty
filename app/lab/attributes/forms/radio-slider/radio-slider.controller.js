@@ -25,7 +25,8 @@
         }
 
         function saveChoice() {
-          $scope.labVm.choices[vm.attribute.name] = {value: vm.choice, percent: vm.percent};
+          $scope.labVm.choices[vm.attribute.name] = vm.choice;
+          $scope.labVm.choices[vm.attribute.name].percent = vm.percent;
           $scope.attributesVm.goToNext(document.querySelector('#' + vm.attribute.name));
         }
     }

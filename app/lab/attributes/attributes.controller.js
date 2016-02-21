@@ -17,6 +17,7 @@
         vm.choiceValidate = choiceValidate;
         vm.render = render;
         vm.goToNext = goToNext;
+        vm.isFinish = isFinish;
 
 
         $window.addEventListener("scroll", checkPos);
@@ -28,6 +29,7 @@
             $state.go('lab.products');
             return;
           }
+          $document.scrollTop(0, 0);
           $rootScope.smallHeader = true;
           vm.product = $scope.labVm.choices.product;
           vm.attributes = $filter('orderBy')(vm.product.attributes, 'order');
@@ -39,7 +41,7 @@
         }
 
         function getResultView(product) {
-          return "app/lab/attributes/results/" + product.name + "/" + product.name + ".view.html";
+          return "app/lab/attributes/summary/" + product.name + "/" + product.name + ".view.html";
         }
 
         function choiceValidate(attribute) {
@@ -47,9 +49,12 @@
         }
 
         function checkPos(e) {
+          checkStatusLabNav()
+
           var i = 0;
           var notFound = true;
-          var lastAttribute =  vm.attributes[0];
+          var lastAttribute = vm.attributes[0];
+          var $summary = $('#summary');
           while (i < vm.attributes.length && notFound) {
             var elemnt = angular.element(document.getElementById(vm.attributes[i].name));
             var posStart = elemnt.prop('offsetTop') - vm.offset - 5;
@@ -59,7 +64,12 @@
                 vm.current = vm.attributes[i];
                 notFound = false;
               } else {
-                lastAttribute = vm.attributes[i + 1];
+                if (i == vm.attributes.length - 1) {
+                    vm.current = "summary";
+                    notFound = false;
+                } else {
+                  lastAttribute = vm.attributes[i + 1];
+                }
               }
             }
             i++;
@@ -72,7 +82,9 @@
         }
 
         function render(attribute) {
-          if (attribute.name !== vm.current.name) {
+          if (attribute == 'summary') {
+              goTo(document.querySelector('#summary'));
+          } else if (!vm.current || attribute.name !== vm.current.name) {
             goTo(document.querySelector('#' + attribute.name));
           }
         }
@@ -84,6 +96,20 @@
 
         function goTo(elmnt) {
           $document.scrollToElement(elmnt, vm.offset, 1000);
+        }
+
+        function isFinish() {
+          var lengthChoices = Object.keys($scope.labVm.choices).length;
+          return lengthChoices == vm.attributes.length + 1;
+        }
+
+        function checkStatusLabNav() {
+          /*if ($('#lab nav').offset().top - 100 <= $document.scrollTop()) {
+            $('#lab nav').css({
+              position: 'fixed',
+              top: 100
+            });
+          }*/
         }
 
         $scope.$on("$destroy", function() {

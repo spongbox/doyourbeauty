@@ -15,6 +15,14 @@
         <span class="lab-step-label">{{attribute.nameMenu}}</span>
       </a>
     </li>
+    <li ng-class="{'active': attributesVm.current == 'summary'}">
+      <a href="#" ng-click="$event.preventDefault();attributesVm.render('summary')" >
+        <span class="lab-step">
+          <span class="number">{{attributesVm.attributes.length + 2}}</span>
+        </span>
+        <span class="lab-step-label">Votre récapitulatif</span>
+      </a>
+    </li>
   </ol>
 </nav>
 <div layout="column" layout-align="space-between center" class="layout-static">
@@ -34,7 +42,7 @@
 
     <div ng-include="attributesVm.getForm(attribute)"></div>
   </div>
-  <div class="layout-child layout-child_spacing form md-whiteframe-2dp" ng-if="attributesVm.product">
+  <div id="summary" class="layout-child layout-child_spacing form md-whiteframe-2dp" ng-if="attributesVm.product"   ng-class="{'active': attributesVm.current == 'summary'}">
     <div ng-include="attributesVm.getResultView(attributesVm.product)"></div>
   </div>
   <div class="logo">
