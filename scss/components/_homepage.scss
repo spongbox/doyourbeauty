@@ -1,3 +1,125 @@
-article h2 {
+.home{
+	font-family: $serif;
 	text-align: center;
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+	@include border-box;
+	img {
+		width: 100%;
+		height: auto;
+	}
+	&.home-expl{
+		background: $white;
+		color: $black;
+		h2{
+			margin: 77px 0 150px;
+		}
+		ol{
+			margin: 0;
+			padding: 0;
+			li{
+				list-style: none;
+				h3{
+					font-size: 28px;
+					span{
+						border: 1px solid;
+					    border-radius: 50%;
+					    display: block;
+					    font-size: 38px;
+					    font-weight: 400;
+					    height: 50px;
+					    line-height: 40px;
+					    margin: 0 auto;
+					    width: 50px;
+					}
+				}
+				.img-container{
+					width: 100%;
+					display: inline-block;
+				}
+				&.step1_wrap{
+					.img-container{margin-top: -175px;}
+				}
+				&.step2_wrap{
+					margin-top: -120px;
+					.img-container{
+						width: 100%;
+						display: inline-block;
+						&.step_2_2{
+							text-align: left;
+							img{max-width: 719px;}
+						}
+						&.step_2_3{
+							text-align: right;
+							img{max-width: 827px;}
+						}
+						&.step_2_4{
+							text-align: left;
+							img{max-width: 1180px;}
+						}
+						&.step_2_5{
+							width: 50%; 
+							text-align: left;
+							img{max-width: 513px;}
+						}
+						&.step_2_6{
+							width: 50%; 
+							text-align: right;
+							img{max-width: 560px;}
+						}
+						&.step_2_7{
+							text-align: right;
+							img{max-width: 818px;}
+						}
+						&.step_2_8{
+							text-align: left;
+							margin-top: -250px;
+							img{max-width: 389px;}
+						}
+						&.step_2_9{
+							text-align: right;
+							margin-top: -350px;
+							img{max-width: 807px;}
+						}
+					}
+				}
+				&.step3_wrap{
+					margin-top: -380px;
+				}
+				&.step4_wrap{
+					min-height: 100vh;
+					background: url("../../img/home/step_4.jpg") no-repeat fixed center center /cover transparent;
+					color: $white;
+					padding: 50px 0;
+				}
+			}
+		}
+	}
+	&.home-contact{
+		background: $white;
+		position: relative;
+		color: $black;
+		padding-bottom: 150px;
+		.qual-link{
+			font-size: 26px;
+		    left: 0;
+		    position: absolute;
+		    text-align: center;
+		    text-decoration: underline;
+		    top: 152px;
+		    width: 100%;
+		}
+		.contact-content{
+			font-size: 28px;
+		    font-weight: 700;
+		    margin-top: -600px;
+		}
+		.phone-numb{
+			font-size: 28px;
+		}
+	}
+	&.home-bottom{
+		min-height: 100vh;
+	}
 }
