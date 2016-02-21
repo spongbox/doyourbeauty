@@ -18,6 +18,7 @@
         vm.render = render;
         vm.goToNext = goToNext;
         vm.isFinish = isFinish;
+
         var posSticky = $('#lab nav').offset().top;
 
 
@@ -73,8 +74,14 @@
             i++;
           }
           if (notFound) {
-            if ($document.scrollTop() >=  $('#packaging-3').offset().top - vm.offset - 5) {
-              vm.current = "packaging-3";
+            if ($document.scrollTop() >=  $('#summary2').offset().top - vm.offset - 5) {
+              vm.current = "summary2";
+            } else if ($document.scrollTop() >=  $('#packaging-3').offset().top - vm.offset - 5) {
+              if ($document.scrollTop() <=  $('#packaging-3').offset().top + $('#packaging-3').outerHeight() - vm.offset - 5) {
+                vm.current = "packaging-3";
+              } else {
+                vm.current = "summary2";
+              }
             } else if ($document.scrollTop() >=  $('#packaging-2').offset().top - vm.offset - 5) {
               if ($document.scrollTop() <=  $('#packaging-2').offset().top + $('#packaging-2').outerHeight() - vm.offset - 5) {
                 vm.current = "packaging-2";
@@ -98,7 +105,6 @@
             }
           }
           $scope.$apply();
-
         }
 
         function render(attribute) {
