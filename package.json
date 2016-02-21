@@ -4,13 +4,13 @@
   "description": "Project Master Startup IESA Multimédoa",
   "main": "index.js",
   "scripts": {
-    "dev": "./bin/dev",
-    "reload-server": "./bin/reload-server",
+    "dev": "bash ./bin/dev",
+    "reload-server": "bash ./bin/reload-server",
     "build-js": "gulp js",
-    "build-css": "./bin/build-css",
-    "watch-html": "./bin/watch-html",
-    "watch-js": "./bin/watch-js",
-    "watch-css": "./bin/watch-css",
+    "build-css": "bash ./bin/build-css",
+    "watch-html": "bash ./bin/watch-html",
+    "watch-js": "bash ./bin/watch-js",
+    "watch-css": "bash ./bin/watch-css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -39,7 +39,8 @@
     "gulp-uglify": "^1.5.2",
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
-    "parallelshell": "^2.0.0"
+    "parallelshell": "^2.0.0",
+    "browser-sync": "^2.11.1"
   },
   "dependencies": {
     "swiper": "^3.3.1"

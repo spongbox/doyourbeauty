@@ -1,13 +1,25 @@
+//HELPERS
+@import "helpers/_helpers.scss";
 
 // SETTINGS
-@import "settings/_default.scss";
+@import "settings/_responsive.scss";
+@import "settings/_width-responsive.scss";
 
 // GENERIC
+@import "generic/_base.scss";
 
-// OBJECTS
-@import "objects/_list.scss";
+//OBJECTS
+@import "objects/_button.scss";
+@import "objects/_layout.scss";
+@import "objects/_form.scss";
+@import "objects/_pt_card.scss";
+@import "objects/_img-circle.scss";
+@import "objects/_checkbox.scss";
+@import "objects/_slider.scss";
 
-// HELPERS 
 
-// COMPONENTS
-@import "components/_homepage.scss";
+//COMPONENTS
+@import "components/_lab.scss";
+@import "components/_lab_nav.scss";
+@import "components/_header.scss";
+@import "components/_footer.scss";

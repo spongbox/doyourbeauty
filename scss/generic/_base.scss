@@ -1,0 +1,25 @@
+body {
+	font-family: $font-stack;
+	color: $grey;
+	background: rgba(0, 0, 0, 0) url("../../img/bg.jpg") no-repeat fixed center;
+	background-size: cover;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+	color: $grey;
+}
+
+
+main {
+	min-height: 100vh;
+	padding-bottom: 260px;
+
+}
+
+@include media-query(mobile) {
+	main {
+		padding-bottom: 440px;
+	}
+}

@@ -1,41 +1,197 @@
 {
   "products": [
       {
-        "order": 1,
+        "order": 3,
         "name": "cream",
+        "title": "Crème",
+        "img": "http://lorempixel.com/g/300/350/abstract/1",
         "attributes": [
           {
             "order": 1,
             "name": "skin",
+            "nameMenu": "Votre type de peau",
+            "title": "Séléctionnez mon type de peau",
             "form": "btn-radio",
-            "value": ["dry", "oily"]
-          },
-          {
+            "haveImgPreview": false,
+            "values": [
+              {
+                "value": "dry",
+                "label": "Séche"
+              },{
+                "value": "normal",
+                "label": "Normal"
+              },{
+                "value": "combination",
+                "label": "Mixte"
+              },{
+                "value": "oily",
+                "label": "Grasse"
+              }
+            ]
+          },{
             "order": 2,
             "name": "texture",
-            "form": "btn-radio",
-            "value": ["fluid", "cream", "gel"]
-          },
-          {
+            "nameMenu": "Votre texture",
+            "title": "La texture de ma crème",
+            "form": "img-radio",
+            "values": [
+              {
+                "value": "gel",
+                "label": "Texture gel",
+                "info": "pour une sensation de fraicheur",
+                "img": "../img/textures/gel.jpg"
+              },{
+                "value": "foam",
+                "label": "Texture mousse",
+                "info": "pour une sensation de légèreté",
+                "img": "../img/textures/mousse.jpg"
+              },{
+                "value": "cream",
+                "label": "Texture crème",
+                "info": "pour une sensation de confort",
+                "img": "../img/textures/creme.jpg"
+              }
+            ]
+          }, {
             "order": 3,
-            "name": "color",
-            "form": "btn-radio",
-            "value": ["red", "blue", "pink"]
-          },
-          {
+            "name": "virtues",
+            "nameMenu": "Vos vertues",
+            "title": "Les vertues",
+            "labelValidate": "Validez vos vertues",
+            "form": "checkbox",
+            "values": [
+              {
+                "value": "bracing",
+                "label": "Tonifiant"
+              },{
+                "value": "nourishing",
+                "label": "Nourissant"
+              },{
+                "value": "reliftant",
+                "label": "Reliftant"
+              },{
+                "value": "soothing",
+                "label": "Apaisant"
+              }
+            ]
+          },{
             "order": 4,
+            "name": "color",
+            "title": "La teinte",
+            "nameMenu": "Votre teinte",
+            "subtitle": "Cette option ne teinte pas la peau",
+            "sliderLabel": "Doser la teinte de ma crème",
+            "labelValidate": "Validez votre teinte",
+            "form": "color",
+            "values": [
+              {
+                "value": "peach",
+                "label": "Pêche",
+                "color": "#FDE9CC"
+              },{
+                "value": "avocado",
+                "label": "Avocat",
+                "color": "#E8F2CE"
+              },{
+                "value": "lychee",
+                "label": "Litchi",
+                "color": "#F3DEE6"
+              },{
+                "value": "fig",
+                "label": "Figue",
+                "color": "#F0FAFF"
+              },{
+                "value": "coconut",
+                "label": "Noix de coco",
+                "color": "#FFFFFF"
+              }
+            ]
+          },{
+            "order": 5,
+            "name": "parfum",
+            "form": "radio-slider",
+            "title": "La senteur",
+            "nameMenu": "Votre senteur",
+            "labelValidate": "Validez votre senteur",
+            "sliderLabel": "Doser la quantité de parfum de ma crème",
+            "values": [
+              {
+                "value": "vanilla",
+                "label": "Vanillé",
+                "img": "../img/parfums/Vanille.png"
+              },{
+                "value": "wooded",
+                "label": "Boisé",
+                "img": "../img/parfums/Boise.png"
+              },{
+                "value": "citrus",
+                "label": "Agrume",
+                "img": "../img/parfums/Agrumes.png"
+              },{
+                "value": "fruity",
+                "label": "Fruité",
+                "img": "../img/parfums/Fruite.png"
+              },{
+                "value": "flowery",
+                "label": "Fleuri",
+                "img": "../img/parfums/Fleuri.png"
+              },{
+                "value": "scentless",
+                "label": "Sans odeur",
+                "img": "../img/parfums/Sans-odeur.png"
+              }
+            ]
+          },{
+            "order": 6,
+            "name": "quantity",
+            "form": "btn-radio",
+            "title": "La quantité",
+            "nameMenu": "Votre quantité",
+            "haveImgPreview": true,
+            "default": "50",
+            "values": [
+              {
+                "value": "50",
+                "label": "50 ml",
+                "img": "http://lorempixel.com/g/100/100/abstract/1"
+              },{
+                "value": "100",
+                "label": "100 ml",
+                "img": "http://lorempixel.com/g/100/100/abstract/2"
+              },{
+                "value": "150",
+                "label": "150 ml",
+                "img": "http://lorempixel.com/g/100/100/abstract/3"
+              }
+            ]
+          },{
+            "order": 7,
             "name": "name",
+            "nameMenu": "Le nom de votre crême",
+            "title": "Nommez ma crême",
+            "label": "Insérez le nom de votre produit",
+            "labelValidate": "Validez le nom de votre crème",
             "form": "input-text"
           }
         ]
       },
       {
-        "order": 2,
-        "name": "lipstick"
+        "order": 1,
+        "name": "scrub",
+        "title": "Gommage",
+        "img": "http://lorempixel.com/g/300/350/abstract/2"
       },
       {
-        "order": 3,
-        "name": "mask"
+        "order": 2,
+        "name": "mask",
+        "title": "Masque",
+        "img": "http://lorempixel.com/g/300/350/abstract/3"
+      },
+      {
+        "order": 4,
+        "name": "face-powder",
+        "title": "Fond de teint",
+        "img": "http://lorempixel.com/g/300/350/abstract/3"
       }
   ]
 }

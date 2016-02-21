@@ -5,9 +5,10 @@
         .module('app.lab')
         .controller('LabController', LabController);
 
+    LabController.$inject = ['$scope'];
 
     /* @ngInject */
-    function LabController() {
+    function LabController($scope) {
         var vm = this;
         vm.choices = {};
     }

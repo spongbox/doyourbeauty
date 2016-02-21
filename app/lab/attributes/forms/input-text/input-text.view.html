@@ -1,6 +1,7 @@
-<div ng-controller="BtnRadioController as vm" ng-init="vm.attribute=attribute">
-  <h3>Input Text</h3>
-  <div layout="row">
-    <input ng-model="choice" name="name" placeholder="Label" ng-change="setChoice()">
-  </div>
+<div ng-controller="InputTextController as vm" ng-init="vm.attribute=attribute">
+    <md-input-container class="form-input">
+      <label><span>{{vm.attribute.label}}</span></label>
+      <input ng-model="vm.choice"/>
+    </md-input-container>
+    <md-button class="md-raised form-validate" ng-click="vm.setChoice()">{{vm.attribute.labelValidate}}</md-button>
 </div>

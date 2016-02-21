@@ -1,0 +1,46 @@
+#lab {
+  color: $main-color;
+
+  .logo {
+    width: 306px;
+    margin-bottom: 50px;
+    img {
+      width: 100%;
+    }
+  }
+}
+.lab-step{
+  display: block;
+  color: $grey;
+  font-size: 18px;
+  line-height: 2em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  border-radius: 50%;
+  background: $white;
+  .number {
+    opacity: 1;
+    transition: opacity 0.2s 0.2s linear, font-size 0s 0.2s;
+  }
+  .material-icons {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    color: $main-color;
+    transition: opacity 0.2s linear, width 0s 0.2s, height 0s 0.2s, color 0.3s ease-in-out;
+  }
+  &.validate {
+    .number {
+      opacity: 0;
+      font-size: 0;
+      transition: opacity 0.2s linear, font-size 0s 0.2s;
+    }
+    .material-icons {
+      opacity: 1;
+      height: 24px;
+      width: 24px;
+      transition: opacity 0.2s 0.2s linear, width 0s 0.2s, height 0s 0.2s, color 0.3s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+#lab {
+	nav {
+		left: 20px;
+    position: fixed;
+    top: 218px;
+		ol{
+			margin: 0;
+			padding: 15px 0;
+			li{
+				list-style: none;
+				margin-bottom: 20px;
+				opacity: 0.4;
+				-webkit-transition: all 300ms ease-in-out 0s;
+				-moz-transition: all 300ms ease-in-out 0s;
+				-o-transition: all 300ms ease-in-out 0s;
+				-ms-transition: all 300ms ease-in-out 0s;
+				transition: all 300ms ease-in-out 0s;
+				&:last-child{
+					margin: 0;
+				}
+				.lab-step{
+					display: inline-block;
+					vertical-align: middle;
+					transition: all 300ms ease-in-out 0s;
+				}
+				.lab-step-label{
+					display: inline-block;
+					margin-left: 10px;
+					vertical-align: middle;
+					color: $white;
+					transition: all 300ms ease-in-out 0s;
+				}
+				&.first-step{
+					.lab-step{
+						border-radius: 0;
+					    height: auto;
+					    line-height: 1.2;
+					    position: relative;
+					    &:before {
+					    	background: $white none repeat scroll 0 0;
+						    content: "";
+						    height: 4px;
+						    left: 0;
+						    position: absolute;
+						    top: -7px;
+						    width: 100%;
+					    }
+					}
+				}
+				&.active {
+					opacity: 1;
+					.lab-step-label {color: $main-color;}
+					.lab-step{
+						-webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+						-moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+						-o-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+						-ms-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+						box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+						background: $main-color;
+						.material-icons {
+							color: #000;
+						}
+					}
+				}
+				&.step-ok{
+					opacity: 1;
+				}
+				&:hover{
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+}

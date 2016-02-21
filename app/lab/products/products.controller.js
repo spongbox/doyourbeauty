@@ -25,7 +25,6 @@
 
         function select(product) {
           $scope.labVm.choices.product = product;
-          $state.go('lab.attributes');
         }
     }
 

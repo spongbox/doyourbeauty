@@ -5,7 +5,7 @@
         'app.core',
         'app.lab',
         'app.homepage',
-        'app.layout',
+        'app.layout'
     ]);
 
 })();
