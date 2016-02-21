@@ -30,6 +30,7 @@
 
         function saveChoices() {
           $scope.labVm.choices[vm.attribute.name] = vm.choices;
+          $scope.attributesVm.goToNext(document.querySelector('#' + vm.attribute.name));
         }
 
     }

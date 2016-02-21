@@ -16,6 +16,7 @@
         function setChoice() {
           if (vm.choice !== "" && vm.choice !== null) {
             $scope.labVm.choices[vm.attribute.name] = vm.choice;
+            $scope.attributesVm.goToNext(document.querySelector('#' + vm.attribute.name));
           } else {
             delete $scope.labVm.choices[vm.attribute.name];
           }

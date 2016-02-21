@@ -14,12 +14,13 @@
         vm.imgPreview = null;
         vm.setChoice = setChoice;
         vm.setImgPreview = setImgPreview;
-        vm.setDefault = setDefault;
 
         function setChoice(attributeChoiced) {
           vm.choice = attributeChoiced;
           $scope.labVm.choices[vm.attribute.name] = attributeChoiced;
           setImgPreview(vm.choice.img);
+
+          $scope.attributesVm.goToNext(document.querySelector('#' + vm.attribute.name));
         }
 
         function setImgPreview(img) {
@@ -27,13 +28,6 @@
             vm.imgPreview = img;
           }
         }
-
-        function setDefault(def) {
-          if (typeof def !== "undefined") {
-            setChoice($filter('getByName')(vm.attribute.values, def));
-          }
-        }
-
     }
 
 })();

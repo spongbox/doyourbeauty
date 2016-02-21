@@ -1,39 +1,37 @@
 <nav>
   <ol>
-    <li class="first-step step-ok"><a href="#">
-      <span class="lab-step validate"><md-icon>done</md-icon></span>
-      <span class="lab-step-label">Votre produit</span></a></li>
-    <li ng-repeat="attribute in attributesVm.product.attributes | orderBy : 'order'"
-    ng-class="{'step-ok': attributesVm.choiceValidate(attribute)}"
-    class="round-step">
-      <a href="#attribute.name">
-      <span class="lab-step"
-            ng-class="{'validate': attributesVm.choiceValidate(attribute)}"
-          >
-            <span class="number">{{attribute.order + 1}}</span>
-            <md-icon>done</md-icon>
-      </span>
-      <span class="lab-step-label">{{attribute.nameMenu}}</span></a>
+    <li class="first-step step-ok">
+      <a ui-sref="lab.products">
+        <span class="lab-step validate"><md-icon>done</md-icon></span>
+        <span class="lab-step-label">Votre produit</span>
+      </a>
+    </li>
+    <li ng-repeat="attribute in attributesVm.attributes" ng-class="{'step-ok': attributesVm.choiceValidate(attribute), 'active': attributesVm.current.name == attribute.name}" class="round-step">
+      <a href="#" scroll-to="{{attribute.name}}" offset="180" duration="1000" easing="easeOutCubic">
+        <span class="lab-step" ng-class="{'validate': attributesVm.choiceValidate(attribute)}">
+          <span class="number">{{attribute.order + 1}}</span>
+          <md-icon>done</md-icon>
+        </span>
+        <span class="lab-step-label">{{attribute.nameMenu}}</span>
+      </a>
     </li>
   </ol>
 </nav>
 <div layout="column" layout-align="space-between center" class="layout-static">
-  <div ng-repeat="attribute in attributesVm.product.attributes | orderBy : 'order'"
-       class="layout-child layout-child_spacing form md-whiteframe-2dp">
-      <span class="form-step md-whiteframe-2dp"
-            ng-class="{'validate': attributesVm.choiceValidate(attribute)}"
-          >
-            <span class="number">{{attribute.order + 1}}</span>
-            <md-icon>done</md-icon>
-      </span>
-      <h2 class="lab-title">{{attribute.title}}</h2>
-      <p class="subtitle" ng-if="attribute.subtitle">
-        {{attribute.subtitle}}
-      </p>
-      <div ng-include="attributesVm.getForm(attribute)">
-      </div>
+  <div id="{{attribute.name}}" ng-repeat="attribute in attributesVm.attributes" class="layout-child layout-child_spacing form md-whiteframe-2dp"
+    ng-class="{'active': attributesVm.current.name == attribute.name}"
+    ng-click="attributesVm.render(attribute)">
+    <span class="form-step md-whiteframe-2dp" ng-class="{'validate': attributesVm.choiceValidate(attribute)}">
+      <span class="number">{{attribute.order + 1}}</span>
+      <md-icon>done</md-icon>
+    </span>
+    <h2 class="lab-title">{{attribute.title}}</h2>
+    <p class="subtitle" ng-if="attribute.subtitle">
+      {{attribute.subtitle}}
+    </p>
+    <div ng-include="attributesVm.getForm(attribute)"></div>
   </div>
-  <div class="layout-child layout-child_spacing form md-whiteframe-2dp">
+  <div class="layout-child layout-child_spacing form md-whiteframe-2dp" ng-if="attributesVm.product">
     <div ng-include="attributesVm.getResultView(attributesVm.product)"></div>
   </div>
 </div>

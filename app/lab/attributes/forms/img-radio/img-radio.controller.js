@@ -17,6 +17,7 @@
     function setChoice(attributeChoiced) {
       vm.choice = attributeChoiced;
       $scope.labVm.choices[vm.attribute.name] = attributeChoiced;
+      $scope.attributesVm.goToNext(document.querySelector('#' + vm.attribute.name));
     }
 
   }

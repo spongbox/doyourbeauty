@@ -28,6 +28,7 @@
 
         function saveChoice() {
           $scope.labVm.choices[vm.attribute.name] = {value: vm.choice, percent: vm.percent};
+          $scope.attributesVm.goToNext(document.querySelector('#' + vm.attribute.name));
         }
 
         function setOpacity() {

@@ -4,6 +4,18 @@
   background: $white;
   padding: 30px;
   text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.3s linear;
+  > * {
+    pointer-events: none;
+  }
+}
+
+.form.active {
+  opacity: 1;
+  > * {
+    pointer-events: auto;
+  }
 }
 
 .form-step {

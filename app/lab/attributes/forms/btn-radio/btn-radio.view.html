@@ -2,7 +2,7 @@
   <div ng-if="vm.attribute.haveImgPreview">
     <img src="{{vm.imgPreview}}" alt="" />
   </div>
-<div layout="row" layout-align="space-around center" ng-init="vm.setDefault(vm.attribute.default)">
+<div layout="row" layout-align="space-around center">
   <md-button class="md-raised form-btn"
     ng-repeat="val in vm.attribute.values"
     ng-class="{'md-primary': vm.choice.value == val.value}"
