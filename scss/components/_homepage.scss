@@ -1,13 +1,18 @@
 .home{
 	font-family: $serif;
 	text-align: center;
-	display: inline-block;
 	width: 100%;
 	overflow: hidden;
 	@include border-box;
 	img {
 		width: 100%;
 		height: auto;
+	}
+	&.home-top{
+		@include transition;
+		button{
+			margin-top: -20%;
+		}
 	}
 	&.home-expl{
 		background: $white;
