@@ -87,6 +87,7 @@
         }
 
         $scope.$on("$destroy", function() {
+          $rootScope.smallHeader = false;
           $window.removeEventListener("scroll", checkPos);
         });
     }
