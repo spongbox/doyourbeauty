@@ -12,11 +12,11 @@ gulp.task('js', function () {
       'app/core/*.js', 'app/blocks/**/*.module.js',
       'app/blocks/**/*.js', 'app/**/*.module.js',
       'app/**/*.js'])
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
       .pipe(concat('app.min.js'))
       .pipe(ngAnnotate())
       .pipe(uglify())
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(gulp.dest('js/'))
 });
 
