@@ -2,8 +2,8 @@
   <div class="layout_container">
     <div class="img-circle img-circle-btn"
       ng-repeat="val in vm.attribute.values"
-      ng-class="{'is-selected': vm.choice == val.value}"
-      ng-click="vm.setChoice(val.value)"
+      ng-class="{'is-selected': vm.choice.value == val.value}"
+      ng-click="vm.setChoice(val)"
       >
       <div class="img">
         <img src="{{val.img}}" alt="" />

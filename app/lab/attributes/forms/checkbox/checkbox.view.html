@@ -2,7 +2,7 @@
   <div layout="row"
   layout-align="space-around center">
     <div ng-repeat="val in vm.attribute.values">
-        <md-checkbox ng-checked="vm.exists(val.value)" ng-click="vm.toggle(val.value)" class="cb_custom">
+        <md-checkbox ng-checked="vm.exists(val)" ng-click="vm.toggle(val)" class="cb_custom">
           {{val.label}}
         </md-checkbox>
       </div>

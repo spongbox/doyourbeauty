@@ -4,7 +4,7 @@
 }
 
 .layout-static-small {
-  max-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -14,4 +14,9 @@
 
 .layout-fluid {
   width: 100%;
+}
+
+.layout-static-medium {
+  width: 100%;
+  padding: 40px;
 }

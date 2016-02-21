@@ -20,19 +20,20 @@
 
         function setChoice(attributeChoiced) {
           if (vm.choice) {
-            document.getElementById('form-color-' + vm.choice).style.opacity = 1;
+            document.getElementById('form-color-' + vm.choice.value).style.opacity = 1;
             vm.percent = 100;
           }
           vm.choice = attributeChoiced;
         }
 
         function saveChoice() {
-          $scope.labVm.choices[vm.attribute.name] = {value: vm.choice, percent: vm.percent};
+          $scope.labVm.choices[vm.attribute.name] = vm.choice;
+          $scope.labVm.choices[vm.attribute.name].percent = parseFloat(vm.percent);
           $scope.attributesVm.goToNext(document.querySelector('#' + vm.attribute.name));
         }
 
         function setOpacity() {
-          document.getElementById('form-color-' + vm.choice).style.opacity = vm.percent / 100;
+          document.getElementById('form-color-' + vm.choice.value).style.opacity = vm.percent / 100;
         }
 
     }

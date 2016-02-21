@@ -96,3 +96,33 @@
   margin-top: 40px;
   min-width: 300px;
 }
+
+.form-preview {
+  width: 200px;
+  height: 200px;
+  background: #f8f8f8;
+  margin: 0 auto 40px;
+}
+
+.form-preview img {
+  width: 100%;
+}
+
+.form-list-vertical {
+  .form-list-title {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 5px;
+ }
+  ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+    text-align: left;
+    list-style: none;
+    li {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+
+}

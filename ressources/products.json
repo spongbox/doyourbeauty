@@ -148,20 +148,18 @@
             "title": "La quantité",
             "nameMenu": "Votre quantité",
             "haveImgPreview": true,
+            "img": "img/pot.jpg",
             "default": "50",
             "values": [
               {
                 "value": "50",
-                "label": "50 ml",
-                "img": "http://lorempixel.com/g/100/100/abstract/1"
+                "label": "50 ml"
               },{
                 "value": "100",
-                "label": "100 ml",
-                "img": "http://lorempixel.com/g/100/100/abstract/2"
+                "label": "100 ml"
               },{
                 "value": "150",
-                "label": "150 ml",
-                "img": "http://lorempixel.com/g/100/100/abstract/3"
+                "label": "150 ml"
               }
             ]
           },{

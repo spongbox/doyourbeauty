@@ -1,0 +1,72 @@
+.preview {
+  position: relative;
+  background: url(../img/pot.jpg) no-repeat center;
+  background-size: 166px 200px;
+  width: 500px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.preview-left {
+  position: absolute;
+  left: 60px;
+  top:10px;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: -60px;
+    width: 10px;
+    height: 10px;
+    background: $main-color;
+    border-radius: 50%;
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 68px;
+    left: 100%;
+    width: 55px;
+    height: 2px;
+    background: $main-color;
+    transform: rotate(30deg);
+  }
+}
+
+.preview-right {
+  position: absolute;
+  right: 15px;
+  top: 45%;
+  line-height: 1.5;
+  margin-top: -0.75em;
+
+  &:after {
+    content: "";
+    display: block;
+    position:absolute;
+    top: -65px;
+    bottom:-55px;
+    left: -35px;
+    width: 30px;
+    border:1px solid $main-color;
+    border-left:0 none;
+    border-right:0 none;
+  }
+  &:before {
+    content: "";
+    display: block;
+    position:absolute;
+    top: -65px;
+    bottom:-55px;
+    left: -5px;
+    width: 30px;
+    border:1px solid $main-color;
+    border-right:0 none;
+  }
+}
+
+.preview-legend {
+  margin: 0px 0px 40px;
+}

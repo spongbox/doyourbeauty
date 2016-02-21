@@ -1,0 +1,57 @@
+<div ng-controller="CreamController as vm" ng-init="vm.cream=labVm.choices">
+  <!--<div ng-if="!attributesVm.isFinish()">
+    <header class="form-header">
+      <h2 class="form-header-title">Votre crème n'est pas encore finis!</h2>
+    </header>
+
+  </div>-->
+  <!--<div ng-if="attributesVm.isFinish()">-->
+  <header class="form-header">
+    <h2 class="form-header-title"  ng-if="!attributesVm.isFinish()">Votre crème n'est pas encore terminé!</h2>
+    <h2 class="form-header-title"  ng-if="attributesVm.isFinish()">Félicitation vous avez créé votre crème!</h2>
+  </header>
+  <div class="layout-static-small" layout="row" layout-align="center start" >
+    <div class="img-circle small spacing" flex="1" ng-if="vm.cream.texture">
+      <div class="img">
+        <img src="{{vm.cream.texture.img}}" alt=""/>
+      </div>
+      <p class="label">{{vm.cream.texture.label}}</p>
+    </div>
+    <div class="img-circle small spacing" flex="1" ng-if="vm.cream.color">
+      <div class="img">
+        <div style="background: {{vm.cream.color.color}};opacity: {{vm.cream.color.percent / 100}};" ></div>
+      </div>
+      <p class="label">{{vm.cream.color.label}}</p>
+    </div>
+    <div class="img-circle small spacing" flex="1" ng-if="vm.cream.parfum">
+      <div class="img">
+        <img src="{{vm.cream.parfum.img}}" alt=""/>
+      </div>
+      <p class="label">{{vm.cream.parfum.label}}</p>
+    </div>
+  </div>
+  <div class="preview" >
+    <div class="form-list-vertical preview-left" ng-if="vm.cream.virtues">
+      <p class="form-list-title" flex=50%>
+        Vos vertues :
+      </p>
+      <ul>
+        <li ng-repeat="virtue in vm.cream.virtues">{{virtue.label}}</li>
+      </ul>
+    </div>
+    <p class="preview-right">
+        Quantité : {{vm.cream.quantity.label}}
+    </p>
+  </div>
+  <p class="preview-legend">
+    {{vm.cream.name}}
+  </p>
+  <div layout="column" layout-align="between-space center" ng-if="!attributesVm.isFinish()">
+    <md-button ng-click="vm.goToTop()" class="md-raised form-validate">Remonter à la 1er étapes</md-button>
+  </div>
+  <div layout="column" layout-align="between-space center" ng-if="attributesVm.isFinish()">
+    <md-button class="md-raised">Sauvegarder ma crème</md-button>
+    <md-button class="md-raised">Déplacer ma crème dans mon panier d'achat</md-button>
+    <md-button class="md-raised">Continuer vers la personnalisation de mon packaging</md-button>
+  </div>
+</div>
