@@ -7,7 +7,7 @@
       </a>
     </li>
     <li ng-repeat="attribute in attributesVm.attributes" ng-class="{'step-ok': attributesVm.choiceValidate(attribute), 'active': attributesVm.current.name == attribute.name}" class="round-step">
-      <a href="#" scroll-to="{{attribute.name}}" offset="180" duration="1000" easing="easeOutCubic">
+      <a href="#" ng-click="$event.preventDefault();attributesVm.render(attribute)">
         <span class="lab-step" ng-class="{'validate': attributesVm.choiceValidate(attribute)}">
           <span class="number">{{attribute.order + 1}}</span>
           <md-icon>done</md-icon>

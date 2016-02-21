@@ -5,9 +5,9 @@
         .module('app.lab.attributes')
         .controller('AttributesController', AttributesController);
 
-    AttributesController.$inject = ['$scope', '$state', 'smoothScroll', '$filter', '$window', '$document'];
+    AttributesController.$inject = ['$scope', '$state', '$filter', '$window', '$document'];
     /* @ngInject */
-    function AttributesController($scope, $state, smoothScroll, $filter, $window, $document) {
+    function AttributesController($scope, $state, $filter, $window, $document) {
         var vm = this;
         vm.product = null;
         vm.attributes = [];
@@ -68,11 +68,7 @@
         }
 
         function goTo(elmnt) {
-          smoothScroll(elmnt, {
-             offset: 180,
-             duration: 1000,
-             easing: 'easeOutCubic'
-          });
+          $document.scrollToElement(elmnt, 180, 1000);
         }
 
         $scope.$on("$destroy", function() {
