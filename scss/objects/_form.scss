@@ -27,8 +27,18 @@
   @extend .lab-step;
 }
 
-.form-btn {
+.form-btn.md-raised {
   min-width: 130px;
+  &.md-primary{
+    background: $main-color;
+    &:hover:not([disabled]){
+      background: $main-color;
+    }
+  }
+  &:hover:not([disabled]){
+    background: $main-color;
+    color: $white;
+  }
 }
 
 .form-input {

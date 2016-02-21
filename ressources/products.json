@@ -39,17 +39,17 @@
                 "value": "gel",
                 "label": "Texture gel",
                 "info": "pour une sensation de fraicheur",
-                "img": "http://lorempixel.com/g/100/100/abstract/1"
+                "img": "../img/textures/gel.jpg"
               },{
                 "value": "foam",
                 "label": "Texture mousse",
                 "info": "pour une sensation de légèreté",
-                "img": "http://lorempixel.com/g/100/100/abstract/2"
+                "img": "../img/textures/mousse.jpg"
               },{
                 "value": "cream",
                 "label": "Texture crème",
                 "info": "pour une sensation de confort",
-                "img": "http://lorempixel.com/g/100/100/abstract/3"
+                "img": "../img/textures/creme.jpg"
               }
             ]
           }, {
@@ -118,27 +118,27 @@
               {
                 "value": "vanilla",
                 "label": "Vanillé",
-                "img": "http://lorempixel.com/g/100/100/abstract/1"
+                "img": "../img/parfums/Vanille.png"
               },{
                 "value": "wooded",
                 "label": "Boisé",
-                "img": "http://lorempixel.com/g/100/100/abstract/2"
+                "img": "../img/parfums/Boise.png"
               },{
                 "value": "citrus",
                 "label": "Agrume",
-                "img": "http://lorempixel.com/g/100/100/abstract/3"
+                "img": "../img/parfums/Agrumes.png"
               },{
                 "value": "fruity",
                 "label": "Fruité",
-                "img": "http://lorempixel.com/g/100/100/abstract/4"
+                "img": "../img/parfums/Fruite.png"
               },{
                 "value": "flowery",
                 "label": "Fleuri",
-                "img": "http://lorempixel.com/g/100/100/abstract/5"
+                "img": "../img/parfums/Fleuri.png"
               },{
                 "value": "scentless",
                 "label": "Sans odeur",
-                "img": "http://lorempixel.com/g/100/100/abstract/6"
+                "img": "../img/parfums/Sans-odeur.png"
               }
             ]
           },{
