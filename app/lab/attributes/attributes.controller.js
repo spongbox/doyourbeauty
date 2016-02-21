@@ -18,6 +18,7 @@
         vm.render = render;
         vm.goToNext = goToNext;
         vm.isFinish = isFinish;
+        var posSticky = $('#lab nav').offset().top;
 
 
         $window.addEventListener("scroll", checkPos);
@@ -64,10 +65,7 @@
                 vm.current = vm.attributes[i];
                 notFound = false;
               } else {
-                if (i == vm.attributes.length - 1) {
-                    vm.current = "summary";
-                    notFound = false;
-                } else {
+                if (i != vm.attributes.length - 1) {
                   lastAttribute = vm.attributes[i + 1];
                 }
               }
@@ -75,15 +73,37 @@
             i++;
           }
           if (notFound) {
-              vm.current = lastAttribute;
+            if ($document.scrollTop() >=  $('#packaging-3').offset().top - vm.offset - 5) {
+              vm.current = "packaging-3";
+            } else if ($document.scrollTop() >=  $('#packaging-2').offset().top - vm.offset - 5) {
+              if ($document.scrollTop() <=  $('#packaging-2').offset().top + $('#packaging-2').outerHeight() - vm.offset - 5) {
+                vm.current = "packaging-2";
+              } else {
+                vm.current = "packaging-3";
+              }
+            } else if ($document.scrollTop() >=  $('#packaging-1').offset().top - vm.offset - 5) {
+              if ($document.scrollTop() <=  $('#packaging-1').offset().top + $('#packaging-1').outerHeight() - vm.offset - 5) {
+                vm.current = "packaging-1";
+              } else {
+                vm.current = "packaging-2";
+              }
+            } else if ($document.scrollTop() >=  $('#summary').offset().top - vm.offset - 5) {
+              if ($document.scrollTop() <=  $('#summary').offset().top + $('#summary').outerHeight() - vm.offset - 5) {
+                vm.current = "summary";
+              } else {
+                vm.current = "packaging-1";
+              }
+            } else {
+                vm.current = lastAttribute;
+            }
           }
           $scope.$apply();
 
         }
 
         function render(attribute) {
-          if (attribute == 'summary') {
-              goTo(document.querySelector('#summary'));
+          if (typeof attribute === "string") {
+            goTo(document.querySelector('#' + attribute));
           } else if (!vm.current || attribute.name !== vm.current.name) {
             goTo(document.querySelector('#' + attribute.name));
           }
@@ -104,12 +124,14 @@
         }
 
         function checkStatusLabNav() {
-          /*if ($('#lab nav').offset().top - 100 <= $document.scrollTop()) {
+          if ($document.scrollTop() >= $('#summary').offset().top - 100) {
             $('#lab nav').css({
-              position: 'fixed',
-              top: 100
+              position: "absolute",
+              top: $('#summary').offset().top
             });
-          }*/
+          } else {
+            $('#lab nav').removeAttr('style');
+          }
         }
 
         $scope.$on("$destroy", function() {

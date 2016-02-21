@@ -10,7 +10,7 @@
             "order": 1,
             "name": "skin",
             "nameMenu": "Votre type de peau",
-            "title": "Séléctionnez mon type de peau",
+            "title": "Séléctionner mon type de peau",
             "form": "btn-radio",
             "haveImgPreview": false,
             "values": [
@@ -57,7 +57,7 @@
             "name": "virtues",
             "nameMenu": "Vos vertues",
             "title": "Les vertues",
-            "labelValidate": "Validez vos vertues",
+            "labelValidate": "Valider vos vertues",
             "form": "checkbox",
             "values": [
               {
@@ -81,7 +81,7 @@
             "nameMenu": "Votre teinte",
             "subtitle": "Cette option ne teinte pas la peau",
             "sliderLabel": "Doser la teinte de ma crème",
-            "labelValidate": "Validez votre teinte",
+            "labelValidate": "Valider votre teinte",
             "form": "color",
             "values": [
               {
@@ -112,7 +112,7 @@
             "form": "radio-slider",
             "title": "La senteur",
             "nameMenu": "Votre senteur",
-            "labelValidate": "Validez votre senteur",
+            "labelValidate": "Valider votre senteur",
             "sliderLabel": "Doser la quantité de parfum de ma crème",
             "values": [
               {
@@ -166,9 +166,9 @@
             "order": 7,
             "name": "name",
             "nameMenu": "Le nom de votre crême",
-            "title": "Nommez ma crême",
-            "label": "Insérez le nom de votre produit",
-            "labelValidate": "Validez le nom de votre crème",
+            "title": "Nommer ma crême",
+            "label": "Insérer le nom de votre produit",
+            "labelValidate": "Valider le nom de votre crème",
             "form": "input-text"
           }
         ]

@@ -23,6 +23,30 @@
         <span class="lab-step-label">Votre récapitulatif</span>
       </a>
     </li>
+    <li ng-class="{'active': attributesVm.current == 'packaging-1'}">
+      <a href="#" ng-click="$event.preventDefault();attributesVm.render('packaging-1')" >
+        <span class="lab-step">
+          <span class="number">10</span>
+        </span>
+        <span class="lab-step-label">Votre finition</span>
+      </a>
+    </li>
+    <li ng-class="{'active': attributesVm.current == 'packaging-2'}">
+      <a href="#" ng-click="$event.preventDefault();attributesVm.render('packaging-2')" >
+        <span class="lab-step">
+          <span class="number">11</span>
+        </span>
+        <span class="lab-step-label">Votre étiquette</span>
+      </a>
+    </li>
+    <li ng-class="{'active': attributesVm.current == 'packaging-3'}">
+      <a href="#" ng-click="$event.preventDefault();attributesVm.render('packaging-3')" >
+        <span class="lab-step">
+          <span class="number">12</span>
+        </span>
+        <span class="lab-step-label">Votre paquet</span>
+      </a>
+    </li>
   </ol>
 </nav>
 <div layout="column" layout-align="space-between center" class="layout-static">
@@ -42,8 +66,39 @@
 
     <div ng-include="attributesVm.getForm(attribute)"></div>
   </div>
+
   <div id="summary" class="layout-child layout-child_spacing form md-whiteframe-2dp" ng-if="attributesVm.product"   ng-class="{'active': attributesVm.current == 'summary'}">
     <div ng-include="attributesVm.getResultView(attributesVm.product)"></div>
+  </div>
+  <!-- TODO: extract in controller view :-->
+  <div id="packaging-1" class="layout-child layout-child_spacing form md-whiteframe-2dp"
+      ng-class="{'active': attributesVm.current == 'packaging-1'}">
+    <span class="form-step md-whiteframe-2dp">
+      <span class="number">10</span>
+      <md-icon>done</md-icon>
+    </span>
+    <header class="form-header">
+      <h2 class="form-header-title">Séléctionner la finition de votre pot</h2>
+    </header>
+    <div layout="row" layout-align="space-around center">
+      <md-button class="md-raised form-btn">PVC</md-button>
+      <md-button class="md-raised form-btn">Verre</md-button>
+      <md-button class="md-raised form-btn">Inox</md-button>
+      <md-button class="md-raised form-btn">Bambou</md-button>
+    </div>
+    <div class="preview" ></div>
+    <div layout="row" layout-align="space-around center">
+      <md-button class="md-raised form-btn">PVC</md-button>
+      <md-button class="md-raised form-btn">Verre</md-button>
+      <md-button class="md-raised form-btn">Inox</md-button>
+      <md-button class="md-raised form-btn">Bambou</md-button>
+    </div>
+  </div>
+  <div id="packaging-2" class="layout-child layout-child_spacing form md-whiteframe-2dp"
+      ng-class="{'active': attributesVm.current == 'packaging-2'}">
+  </div>
+  <div id="packaging-3" class="layout-child layout-child_spacing form md-whiteframe-2dp"
+      ng-class="{'active': attributesVm.current == 'packaging-3'}">
   </div>
   <div class="logo">
     <img src="img/logo_white.svg">

@@ -18,7 +18,6 @@
         }
 
         function transformPercent(percent) {
-          console.log(percent);
           return percent/100;
         }
     }
