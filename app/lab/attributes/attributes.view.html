@@ -110,18 +110,20 @@
       <header class="form-header">
         <h2 class="form-header-title">Personnaliser l'étiquette de votre crème</h2>
       </header>
-      <div>
+      <div  class="eti-color">
         <p>Couleur</p>
         <div><img src="img/palette-{{attributeVm.palette}}.png" alt="" ng-click="attributeVm.palette='pink'" ng-init="attributeVm.palette='black'"/></div>
       </div>
-      <div >
-        <img src="img/pot.jpg" alt="" />
-        <p>{{attributeVm.etiquette}}</p>
+      <div class="eti-txt">
+        <div class="eti-img">
+          <img src="img/Pack_perso_01-03.png" alt="" />
+          <p>{{attributeVm.etiquette}}</p>
+        </div>
+        <md-input-container class="form-input">
+          <label><span>Insérez votre texte</span></label>
+          <input ng-model="attributeVm.etiquette"/>
+        </md-input-container> 
       </div>
-      <md-input-container class="form-input">
-        <label><span>Insérez votre texte</span></label>
-        <input ng-model="attributeVm.etiquette"/>
-      </md-input-container>
       <md-button class="md-raised form-validate" ng-click="attributesVm.validePack('packaging-2');">Valider votre étiquette</md-button>
   </div>
   <div id="packaging-3" class="layout-child layout-child_spacing form md-whiteframe-2dp"
@@ -136,16 +138,17 @@
       </header>
       <div>
         <p>Couleur</p>
-        <div><img src="img/palette-{{attributeVm.palette}}.png" alt="" ng-click="attributeVm.palette='pink'" ng-init="attributeVm.palette='black'"/></div>
+        <img src="img/palette-{{attributeVm.palette}}.png" alt="" ng-click="attributeVm.palette='pink'" ng-init="attributeVm.palette='black'"/>
       </div>
       <div>
         <img src="img/pot.jpg" alt="" />
         <p>{{attributeVm.textPack}}</p>
+        <md-input-container class="form-input">
+          <label><span>Insérez votre texte</span></label>
+          <input ng-model="attributeVm.textPack"/>
+        </md-input-container>
       </div>
-      <md-input-container class="form-input">
-        <label><span>Insérez votre texte</span></label>
-        <input ng-model="attributeVm.textPack"/>
-      </md-input-container>
+      
       <md-button class="md-raised form-validate" ng-click="attributesVm.validePack('packaging-3');">Valider votre packaging</md-button>
   </div>
   <div id="summary2" class="layout-child layout-child_spacing form md-whiteframe-2dp" ng-if="attributesVm.showPack" ng-class="{'active': attributesVm.current == 'summary2'}">

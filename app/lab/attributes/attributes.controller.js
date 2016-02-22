@@ -24,6 +24,7 @@
           'packaging-3': false
         };
         vm.validePack = validePack;
+        vm.showPack = true;
 
         var posSticky = $('#lab nav').offset().top;
 
