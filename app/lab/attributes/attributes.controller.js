@@ -18,6 +18,13 @@
         vm.render = render;
         vm.goToNext = goToNext;
         vm.isFinish = isFinish;
+        vm.packValidation = {
+          'packaging-1': false,
+          'packaging-2': false,
+          'packaging-3': false
+        };
+        vm.validePack = validePack;
+
         var posSticky = $('#lab nav').offset().top;
 
 
@@ -73,32 +80,40 @@
             i++;
           }
           if (notFound) {
-            if ($document.scrollTop() >=  $('#packaging-3').offset().top - vm.offset - 5) {
-              vm.current = "packaging-3";
-            } else if ($document.scrollTop() >=  $('#packaging-2').offset().top - vm.offset - 5) {
-              if ($document.scrollTop() <=  $('#packaging-2').offset().top + $('#packaging-2').outerHeight() - vm.offset - 5) {
-                vm.current = "packaging-2";
-              } else {
-                vm.current = "packaging-3";
+            vm.current = lastAttribute;
+            if (vm.showPack) {
+              if ($document.scrollTop() >=  $('#summary2').offset().top - vm.offset - 5) {
+                vm.current = "summary2";
+              } else if ($document.scrollTop() >=  $('#packaging-3').offset().top - vm.offset - 5) {
+                if ($document.scrollTop() <=  $('#packaging-3').offset().top + $('#packaging-3').outerHeight() - vm.offset - 5) {
+                  vm.current = "packaging-3";
+                } else {
+                  vm.current = "summary2";
+                }
+              } else if ($document.scrollTop() >=  $('#packaging-2').offset().top - vm.offset - 5) {
+                if ($document.scrollTop() <=  $('#packaging-2').offset().top + $('#packaging-2').outerHeight() - vm.offset - 5) {
+                  vm.current = "packaging-2";
+                } else {
+                  vm.current = "packaging-3";
+                }
+              } else if ($document.scrollTop() >=  $('#packaging-1').offset().top - vm.offset - 5) {
+                if ($document.scrollTop() <=  $('#packaging-1').offset().top + $('#packaging-1').outerHeight() - vm.offset - 5) {
+                  vm.current = "packaging-1";
+                } else {
+                  vm.current = "packaging-2";
+                }
+              } else if ($document.scrollTop() >=  $('#summary').offset().top - vm.offset - 5) {
+                if ($document.scrollTop() <=  $('#summary').offset().top + $('#summary').outerHeight() - vm.offset - 5) {
+                  vm.current = "summary";
+                } else {
+                  vm.current = "packaging-1";
+                }
               }
-            } else if ($document.scrollTop() >=  $('#packaging-1').offset().top - vm.offset - 5) {
-              if ($document.scrollTop() <=  $('#packaging-1').offset().top + $('#packaging-1').outerHeight() - vm.offset - 5) {
-                vm.current = "packaging-1";
-              } else {
-                vm.current = "packaging-2";
-              }
-            } else if ($document.scrollTop() >=  $('#summary').offset().top - vm.offset - 5) {
-              if ($document.scrollTop() <=  $('#summary').offset().top + $('#summary').outerHeight() - vm.offset - 5) {
-                vm.current = "summary";
-              } else {
-                vm.current = "packaging-1";
-              }
-            } else {
-                vm.current = lastAttribute;
+            } else if($document.scrollTop() >=  $('#summary').offset().top - vm.offset - 5) {
+              vm.current = "summary";
             }
           }
           $scope.$apply();
-
         }
 
         function render(attribute) {
@@ -124,14 +139,30 @@
         }
 
         function checkStatusLabNav() {
-          if ($document.scrollTop() >= $('#summary').offset().top - 100) {
-            $('#lab nav').css({
-              position: "absolute",
-              top: $('#summary').offset().top
-            });
+          if (vm.showPack) {
+            if ($document.scrollTop() >= $('#summary2').offset().top - 100) {
+              $('#lab nav').css({
+                position: "absolute",
+                top: $('#summary2').offset().top
+              });
+            } else {
+              $('#lab nav').removeAttr('style');
+            }
           } else {
-            $('#lab nav').removeAttr('style');
+            if ($document.scrollTop() >= $('#summary').offset().top - 100) {
+              $('#lab nav').css({
+                position: "absolute",
+                top: $('#summary').offset().top
+              });
+            } else {
+              $('#lab nav').removeAttr('style');
+            }
           }
+        }
+
+        function validePack(step) {
+          vm.packValidation[step] = true;
+          goToNext(document.querySelector('#' + step));
         }
 
         $scope.$on("$destroy", function() {

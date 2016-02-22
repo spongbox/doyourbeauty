@@ -11,6 +11,7 @@
     function CreamController($scope, $document) {
         var vm = this;
         vm.goToTop = goToTop;
+        vm.goToPack = goToPack;
         vm.transformPercent = transformPercent;
 
         function goToTop() {
@@ -19,6 +20,11 @@
 
         function transformPercent(percent) {
           return percent/100;
+        }
+
+        function goToPack() {
+          $scope.attributesVm.showPack = true;
+          $scope.attributesVm.goToNext(document.querySelector('#summary'));
         }
     }
 
