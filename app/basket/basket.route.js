@@ -16,7 +16,7 @@
             {
                 state: 'basket',
                 config: {
-                    url: '/',
+                    url: '/panier',
                     templateUrl: 'app/basket/basket.view.html',
                     controller: 'BasketController',
                     controllerAs: 'basket',
