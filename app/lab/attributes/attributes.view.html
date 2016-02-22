@@ -103,28 +103,31 @@
       <header class="form-header">
         <h2 class="form-header-title">Personnaliser l'étiquette de votre crème</h2>
       </header>
-      <div>
+      <div class="eti-color">
         <p>Couleur</p>
-        <div><img src="img/palette-{{attributeVm.palette}}.png" alt="" ng-click="attributeVm.palette='pink'" ng-init="attributeVm.palette='black'"/></div>
+        <div ng-click="attributesVm.changeEtiquette();"><img src="img/palette-{{attributesVm.palette}}.png" alt="" /></div>
       </div>
-      <div >
-        <img src="img/pot.jpg" alt="" />
-        <p>{{attributeVm.etiquette}}</p>
+      <div class="eti-txt">
+        <div class="eti-img">
+          <img src="{{attributesVm.imgEtiquette}}" alt="" />
+          <p style="color:{{attributesVm.colorEtiquette}};">{{attributeVm.etiquette}}</p>
+        </div>
+        <md-input-container class="form-input">
+          <label><span>Insérez votre texte</span></label>
+          <input ng-model="attributeVm.etiquette"/>
+        </md-input-container>
       </div>
-      <md-input-container class="form-input">
-        <label><span>Insérez votre texte</span></label>
-        <input ng-model="attributeVm.etiquette"/>
-      </md-input-container>
       <md-button class="md-raised form-validate" ng-click="attributesVm.validePack('packaging-2');">Valider votre étiquette</md-button>
   </div>
   <div id="summary2" class="layout-child layout-child_spacing form md-whiteframe-2dp" ng-if="attributesVm.showPack" ng-class="{'active': attributesVm.current == 'summary2'}">
     <header class="form-header">
       <h2 class="form-header-title">Félicitation vous avez créé votre packaging</h2>
     </header>
-    <div class="preview"></div>
+    <div class="preview" style="background-image:url(img/pack/pot-bamboo.jpg)"></div>
     <div layout="column" layout-align="center center">
       <md-button class="md-raised static-width">Sauvegarder ma crème</md-button>
       <md-button class="md-raised static-width">Déplacer ma crème dans mon panier d'achat</md-button>
+      <md-button class="md-raised static-width">Commander un échantillon gratuit pour tester ma crème</md-button>
     </div>
   </div>
 

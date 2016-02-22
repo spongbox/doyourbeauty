@@ -4,7 +4,7 @@
         "order": 3,
         "name": "cream",
         "title": "Crème",
-        "img": "http://lorempixel.com/g/300/350/abstract/1",
+        "img": "img/DYB_Textures_cream.jpg",
         "attributes": [
           {
             "order": 1,
@@ -177,19 +177,19 @@
         "order": 1,
         "name": "scrub",
         "title": "Gommage",
-        "img": "http://lorempixel.com/g/300/350/abstract/2"
+        "img": "img/DYB_Textures_gommage.jpg"
       },
       {
         "order": 2,
         "name": "mask",
         "title": "Masque",
-        "img": "http://lorempixel.com/g/300/350/abstract/3"
+        "img": "img/DYB_Textures_mask.jpg"
       },
       {
         "order": 4,
         "name": "face-powder",
         "title": "Fond de teint",
-        "img": "http://lorempixel.com/g/300/350/abstract/3"
+        "img": "img/DYB_Textures_fondteint.jpg"
       }
   ]
 }
