@@ -13,6 +13,7 @@
 
 .form.active {
   opacity: 1;
+  outline: 0 none;
   > * {
     pointer-events: auto;
   }
@@ -41,7 +42,7 @@
   }
 }
 
-.form-input {
+md-input-container.form-input {
   display: block;
   text-align: center;
   width: 400px;
@@ -56,6 +57,10 @@
   input {
     text-align: center;
     transition: border 0.3s ease-in;
+  }
+  &:hover, &.md-input-focused{
+    .md-input{border-color: $black;}
+    label span{color: $black;}
   }
 }
 
