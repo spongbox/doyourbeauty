@@ -18,12 +18,17 @@
         vm.render = render;
         vm.goToNext = goToNext;
         vm.isFinish = isFinish;
+        vm.imgEtiquette = "img/pack/Pack_perso_01-06.png";
+        vm.colorEtiquette = '#000';
+        vm.palette = "default";
         vm.packValidation = {
           'packaging-1': false,
-          'packaging-2': false,
-          'packaging-3': false
+          'packaging-2': false
         };
         vm.validePack = validePack;
+        vm.packTexture = 'glass';
+        vm.changePackTexture = changePackTexture;
+        vm.changeEtiquette = changeEtiquette;
 
         var posSticky = $('#lab nav').offset().top;
 
@@ -84,17 +89,11 @@
             if (vm.showPack) {
               if ($document.scrollTop() >=  $('#summary2').offset().top - vm.offset - 5) {
                 vm.current = "summary2";
-              } else if ($document.scrollTop() >=  $('#packaging-3').offset().top - vm.offset - 5) {
-                if ($document.scrollTop() <=  $('#packaging-3').offset().top + $('#packaging-3').outerHeight() - vm.offset - 5) {
-                  vm.current = "packaging-3";
-                } else {
-                  vm.current = "summary2";
-                }
               } else if ($document.scrollTop() >=  $('#packaging-2').offset().top - vm.offset - 5) {
                 if ($document.scrollTop() <=  $('#packaging-2').offset().top + $('#packaging-2').outerHeight() - vm.offset - 5) {
                   vm.current = "packaging-2";
                 } else {
-                  vm.current = "packaging-3";
+                  vm.current = "summary2";
                 }
               } else if ($document.scrollTop() >=  $('#packaging-1').offset().top - vm.offset - 5) {
                 if ($document.scrollTop() <=  $('#packaging-1').offset().top + $('#packaging-1').outerHeight() - vm.offset - 5) {
@@ -163,6 +162,17 @@
         function validePack(step) {
           vm.packValidation[step] = true;
           goToNext(document.querySelector('#' + step));
+        }
+
+        function changePackTexture() {
+          vm.packTexture = "wood";
+          $('#packaging-1 .preview').css('background-image', 'url(img/pack/pot-bamboo.jpg)');
+        }
+
+        function changeEtiquette() {
+          vm.palette = "pink";
+          vm.imgEtiquette = "img/pack/Pack_perso_01-04.png";
+          vm.colorEtiquette = '#D60D53';
         }
 
         $scope.$on("$destroy", function() {
