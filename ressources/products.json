@@ -4,7 +4,7 @@
         "order": 3,
         "name": "cream",
         "title": "Crème",
-        "img": "img/DYB_Textures_cream.jpg",
+        "img": "/img/DYB_Textures_cream.jpg",
         "attributes": [
           {
             "order": 1,
@@ -148,7 +148,7 @@
             "title": "La quantité",
             "nameMenu": "Votre quantité",
             "haveImgPreview": true,
-            "img": "img/pot.jpg",
+            "img": "/img/pot.jpg",
             "default": "50",
             "values": [
               {
@@ -177,19 +177,19 @@
         "order": 1,
         "name": "scrub",
         "title": "Gommage",
-        "img": "img/DYB_Textures_gommage.jpg"
+        "img": "/img/DYB_Textures_gommage.jpg"
       },
       {
         "order": 2,
         "name": "mask",
         "title": "Masque",
-        "img": "img/DYB_Textures_mask.jpg"
+        "img": "/img/DYB_Textures_mask.jpg"
       },
       {
         "order": 4,
         "name": "face-powder",
         "title": "Fond de teint",
-        "img": "img/DYB_Textures_fondteint.jpg"
+        "img": "/img/DYB_Textures_fondteint.jpg"
       }
   ]
 }

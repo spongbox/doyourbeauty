@@ -3,9 +3,16 @@
 
   angular.module('app.homepage').controller('HomeController', HomeController);
 
-  function HomeController() {
+  HomeController.$inject = ['$state'];
+
+  function HomeController($state) {
     var vm = this;
-    vm.title = 'Homepage';
+    vm.goTo =  goTo;
+
+    function goTo() {
+      $state.go('lab.products');
+    }
+
   }
 })();
 
@@ -23,7 +30,7 @@ var heightElem = function(){
 
 var heightElemResize = function(){
 	$(window).resize(function(){
-		setTimeout(function(){ 
+		setTimeout(function(){
 			heightElem();
 		}, 800);
 	});

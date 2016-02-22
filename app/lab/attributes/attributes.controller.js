@@ -18,7 +18,7 @@
         vm.render = render;
         vm.goToNext = goToNext;
         vm.isFinish = isFinish;
-        vm.imgEtiquette = "img/pack/Pack_perso_01-06.png";
+        vm.imgEtiquette = "/img/pack/Pack_perso_01-06.png";
         vm.colorEtiquette = '#000';
         vm.palette = "default";
         vm.packValidation = {
@@ -166,12 +166,12 @@
 
         function changePackTexture() {
           vm.packTexture = "wood";
-          $('#packaging-1 .preview').css('background-image', 'url(img/pack/pot-bamboo.jpg)');
+          $('#packaging-1 .preview').css('background-image', 'url(/img/pack/pot-bamboo.jpg)');
         }
 
         function changeEtiquette() {
           vm.palette = "pink";
-          vm.imgEtiquette = "img/pack/Pack_perso_01-04.png";
+          vm.imgEtiquette = "/img/pack/Pack_perso_01-04.png";
           vm.colorEtiquette = '#D60D53';
         }
 

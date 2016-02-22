@@ -19,7 +19,7 @@
                     url: '/',
                     templateUrl: 'app/homepage/homepage.view.html',
                     controller: 'HomeController',
-                    controllerAs: 'home',
+                    controllerAs: 'homeVm',
                     title: 'DoYourBeauty'
                 }
             }

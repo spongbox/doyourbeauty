@@ -16,8 +16,7 @@
         };
 
         $locationProvider.html5Mode({
-          enabled: false,
-          requireBase: false
+          enabled: true
         });
 
         this.configure = function(cfg) {
