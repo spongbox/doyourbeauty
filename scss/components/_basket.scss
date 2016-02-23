@@ -2,13 +2,14 @@
  	text-align: center;
  	margin-bottom: 10px;
  	.basket-container{
- 		background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
 	    box-sizing: border-box;
-	    display: inline-block;
-	    padding: 26px;
-	    margin-bottom: 25px;
+	    display: block;
+	    margin: 25px auto;
 	    img{
-	    	width: 100%;
+				padding: 26px;
+				background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+	    	max-width: 653px;
+        width: 100%;
 	    	height: auto;
 	    }
  	}

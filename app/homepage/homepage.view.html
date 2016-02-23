@@ -1,9 +1,9 @@
 <section
   class="home home-lab home-top"
-  layout="row"
-  layout-align="center center"
-  >
-  <md-button class="md-raised" ng-click="homeVm.goTo()">Accéder à mon lab {{homeVm.title}}</md-button>
+  layout="column"
+  layout-align="start center">
+  <a class="link-home" ui-sref="lab.products">Accéder à mon atelier</a>
+  <span id="callToScroll"></span>
 </section>
 <section class="home home-expl">
   <h2>Nous vous proposons une expérience inédite en 4 étapes</h2>
@@ -45,5 +45,5 @@
   layout="row"
   layout-align="center center"
   >
-  <md-button ng-href="#/lab/products"  class="md-raised">Accéder à mon lab</md-button>
+  <a class="link-home" ui-sref="lab.products">Accéder à mon atelier</a>
 </section>

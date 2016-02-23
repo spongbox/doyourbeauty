@@ -1,7 +1,7 @@
 <div ng-controller="CreamController as vm" ng-init="vm.cream=labVm.choices">
   <header class="form-header">
-    <h2 class="form-header-title"  ng-if="!attributesVm.isFinish()">Votre crème n'est pas encore terminée!</h2>
-    <h2 class="form-header-title"  ng-if="attributesVm.isFinish()">Félicitation vous avez créé votre crème!</h2>
+    <h2 class="form-header-title"  ng-if="!attributesVm.isFinish()">Récapitulatif de votre création en cours</h2>
+    <h2 class="form-header-title"  ng-if="attributesVm.isFinish()">Félicitation vous avez créé votre crème</h2>
   </header>
   <div class="layout-static-small" layout="row" layout-align="center start" >
     <div class="img-circle small spacing" flex="1" ng-if="vm.cream.texture">
@@ -40,7 +40,7 @@
     {{vm.cream.name}}
   </p>
   <div layout="column" layout-align="center center" ng-if="!attributesVm.isFinish()">
-    <md-button ng-click="vm.goToTop()" class="md-raised">Remonter à la 1er étapes</md-button>
+    <md-button ng-click="vm.goToTop()" class="md-raised">Revenir au début</md-button>
   </div>
   <div layout="column" layout-align="center center" ng-if="attributesVm.isFinish()">
     <md-button class="md-raised static-width">Sauvegarder ma crème</md-button>

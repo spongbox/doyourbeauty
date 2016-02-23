@@ -22,7 +22,7 @@ header#header{
 	}
 	.header-center {
 	    display: inline-block;
-	    margin: 60px auto;
+	    margin: 60px auto 20px;
 	    width: 306px;
 	    @include transition;
 	    img{

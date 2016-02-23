@@ -9,9 +9,19 @@
 		height: auto;
 	}
 	&.home-top{
+		position: relative;
+		height: calc(100vh - 275px);
 		@include transition;
-		button{
-			margin-top: -20%;
+		.link-home {
+			margin-top: 150px;
+		}
+		.slogan {
+			margin-top: 0;
+			display: block;
+			font-size: 30px;
+			color: #fff;
+			font-family: 'Playfair Display', serif;
+			font-weight: 400;
 		}
 	}
 	&.home-expl{
@@ -64,12 +74,12 @@
 							img{max-width: 1180px;}
 						}
 						&.step_2_5{
-							width: 50%; 
+							width: 50%;
 							text-align: left;
 							img{max-width: 513px;}
 						}
 						&.step_2_6{
-							width: 50%; 
+							width: 50%;
 							text-align: right;
 							img{max-width: 560px;}
 						}
@@ -126,5 +136,46 @@
 	}
 	&.home-bottom{
 		min-height: 100vh;
+	}
+}
+
+.link-home {
+	display: block;
+	padding: 10px 50px;
+	border:1px solid #fff;
+	background: rgba(255, 255, 255, 0.2);
+	color: #fff;
+	font-family: Helvetica, Arial, sans-serif;
+	transition: all 0.3s ease-in;
+	&:hover {
+		color: #000;
+		background: rgba(255, 255, 255, 1);
+	}
+}
+
+#callToScroll {
+	display: block;
+		opacity: 0.2;
+	&:after {
+		content: "";
+		position: absolute;
+		background: #fff;
+		height: 15px;
+		width: 100%;
+		left:0;
+		bottom: 0;
+		z-index: 2;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		background: #fff;
+		height: 25px;
+		width: 25px;
+		transform: rotate(45deg);
+		left: 50%;
+		margin-left: -10px;
+		bottom: 0;
+		z-index: 3;
 	}
 }
