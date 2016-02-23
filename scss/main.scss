@@ -1,13 +1,30 @@
-$badass: pink;
-$power: blue;
+//HELPERS
+@import "helpers/_helpers.scss";
 
-body {
-  margin: 0;
-  background-color: $badass;
-}
+// SETTINGS
+@import "settings/_responsive.scss";
+@import "settings/_width-responsive.scss";
 
-div {
-  width: 100px;
-  height: 100px;
-  background-color: $power;
-}
+// GENERIC
+@import "generic/_base.scss";
+
+//OBJECTS
+@import "objects/_button.scss";
+@import "objects/_layout.scss";
+@import "objects/_form.scss";
+@import "objects/_pt_card.scss";
+@import "objects/_img-circle.scss";
+@import "objects/_checkbox.scss";
+@import "objects/_slider.scss";
+@import "objects/_preview.scss";
+@import "objects/_circleselect.scss";
+
+
+//COMPONENTS
+@import "components/_homepage.scss";
+@import "components/_lab.scss";
+@import "components/_lab_nav.scss";
+@import "components/_header.scss";
+@import "components/_footer.scss";
+@import "components/_packaging.scss";
+@import "components/_basket.scss";

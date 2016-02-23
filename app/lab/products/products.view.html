@@ -1,0 +1,14 @@
+<div class="pt_card_container">
+  <a ui-sref="lab.attributes"
+  	class="pt_card md-whiteframe-2dp"
+    ng-repeat="product in productsVm.products | orderBy : 'order'"
+    ng-click="productsVm.select(product)"
+    >
+    <div class="pt_img">
+      <img src="{{product.img}}" alt="" />
+    </div>
+    <div class="pt_name">
+      {{product.title}}
+    </div>
+  </a>
+</div>

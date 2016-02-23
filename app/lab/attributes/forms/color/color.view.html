@@ -1,0 +1,18 @@
+<div ng-controller="ColorController as vm" ng-init="vm.attribute=attribute">
+  <div class="layout_container">
+    <div class="img-circle img-circle-btn small-circle"
+      ng-repeat="val in vm.attribute.values"
+      ng-class="{'is-selected': vm.choice.value == val.value}"
+      ng-click="vm.setChoice(val)"
+      >
+      <div class="img visible">
+        <div id="form-color-{{val.value}}" style="background: {{val.color}};"></div>
+        <!--<div id="form-color-{{val.value}}" style="background: url(img/colors/cream-{{val.value}}.png);"></div>-->
+      </div>
+      <p class="label">{{val.label}}</p>
+    </div>
+  </div>
+  <p class="form-label-title">{{vm.attribute.sliderLabel}}</p>
+  <md-slider md-discrete ng-disabled="vm.choice == null" ng-model="vm.percent" min="0" max="100" ng-change="vm.setOpacity()" aria-label="{{vm.attribute.sliderLabel}}"></md-slider>
+  <md-button ng-click="vm.saveChoice()" class="md-raised form-validate">{{vm.attribute.labelValidate}}</md-button>
+</div>

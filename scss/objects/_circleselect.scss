@@ -1,0 +1,94 @@
+#packaging-1 {
+  position: relative;
+}
+
+.circle-btn {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.circle-btn.glass:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 10px;
+  top: 80%;
+  left: 220px;
+  border: 1px solid $main-color;
+  border-top: 0;
+  border-right: 0;
+  z-index: 2;
+}
+
+.circle-btn.wood:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 285px;
+  top: 80%;
+  left: 230px;
+  border: 1px solid $main-color;
+  border-top: 0;
+  border-left: 0;
+  z-index: 2;
+}
+
+.circle-select {
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid $main-color;
+  z-index: 2;
+
+}
+
+.circle-select.top {
+  left: 220px;
+}
+
+.circle-select.top:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -0.5px;
+  display: block;
+  height: 10px;
+  width: 1px;
+  background: $main-color;
+}
+
+.circle-select.bottom {
+  bottom: 180px;
+  left: 350px;
+}
+
+.circle-select.bottom:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -0.5px;
+  display: block;
+  height: 10px;
+  width: 1px;
+  background: $main-color;
+}
+
+.circle-select.bottom:before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -100px;
+  margin-left: -0.5px;
+  display: block;
+  height: 20px;
+  width: calc(100px + 50%);
+  border: 1px solid $main-color;
+  border-bottom: 0;
+  border-right: 0;
+}

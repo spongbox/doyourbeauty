@@ -4,12 +4,13 @@
   "description": "Project Master Startup IESA Multimédoa",
   "main": "index.js",
   "scripts": {
-    "dev": "./bin/dev",
-    "reload-server": "./bin/reload-server",
-    "build-js": "./bin/build-js",
-    "build-css": "./bin/build-css",
-    "watch-js": "./bin/watch-js",
-    "watch-css": "./bin/watch-css",
+    "dev": "bash ./bin/dev",
+    "reload-server": "bash ./bin/reload-server",
+    "build-js": "gulp js",
+    "build-css": "bash ./bin/build-css",
+    "watch-html": "bash ./bin/watch-html",
+    "watch-js": "bash ./bin/watch-js",
+    "watch-css": "bash ./bin/watch-css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,8 +30,19 @@
   "homepage": "https://github.com/spongbox/doyourbeauty#readme",
   "devDependencies": {
     "concat": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-html": "^1.0.5",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.2",
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
-    "parallelshell": "^2.0.0"
+    "parallelshell": "^2.0.0",
+    "browser-sync": "^2.11.1"
+  },
+  "dependencies": {
+    "swiper": "^3.3.1"
   }
 }

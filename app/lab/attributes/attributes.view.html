@@ -1,0 +1,138 @@
+<nav>
+  <ol>
+    <li class="first-step step-ok">
+      <a ui-sref="lab.products">
+        <span class="lab-step validate"><md-icon>done</md-icon></span>
+        <span class="lab-step-label">Votre produit</span>
+      </a>
+    </li>
+    <li ng-repeat="attribute in attributesVm.attributes" ng-class="{'step-ok': attributesVm.choiceValidate(attribute), 'active': attributesVm.current.name == attribute.name}" class="round-step">
+      <a href="#" ng-click="$event.preventDefault();attributesVm.render(attribute)">
+        <span class="lab-step" ng-class="{'validate': attributesVm.choiceValidate(attribute)}">
+          <span class="number">{{attribute.order + 1}}</span>
+          <md-icon>done</md-icon>
+        </span>
+        <span class="lab-step-label">{{attribute.nameMenu}}</span>
+      </a>
+    </li>
+    <li ng-class="{'active': attributesVm.current == 'summary', 'step-ok': attributesVm.isFinish()}">
+      <a href="#" ng-click="$event.preventDefault();attributesVm.render('summary')" >
+        <span class="lab-step"  ng-class="{'validate': attributesVm.isFinish()}">
+          <span class="number">9</span>
+          <md-icon>done</md-icon>
+        </span>
+        <span class="lab-step-label">Votre récapitulatif</span>
+      </a>
+    </li>
+    <li ng-class="{'active': attributesVm.current == 'packaging-1', 'step-ok': attributesVm.packValidation['packaging-1']}" ng-if="attributesVm.showPack">
+      <a href="#" ng-click="$event.preventDefault();attributesVm.render('packaging-1')" >
+        <span class="lab-step" ng-class="{'validate': attributesVm.packValidation['packaging-1']}">
+          <span class="number">10</span>
+          <md-icon>done</md-icon>
+        </span>
+        <span class="lab-step-label">Votre finition</span>
+      </a>
+    </li>
+    <li ng-class="{'active': attributesVm.current == 'packaging-2', 'step-ok': attributesVm.packValidation['packaging-2']}" ng-if="attributesVm.showPack">
+      <a href="#" ng-click="$event.preventDefault();attributesVm.render('packaging-2')" >
+        <span class="lab-step" ng-class="{'validate': attributesVm.packValidation['packaging-2']}">
+          <span class="number">11</span>
+          <md-icon>done</md-icon>
+        </span>
+        <span class="lab-step-label">Votre étiquette</span>
+      </a>
+    </li>
+  </ol>
+</nav>
+<div layout="column" layout-align="space-between center" class="layout-static">
+  <div id="{{attribute.name}}" ng-repeat="attribute in attributesVm.attributes" class="layout-child layout-child_spacing form md-whiteframe-2dp"
+    ng-class="{'active': attributesVm.current.name == attribute.name}"
+    ng-click="attributesVm.render(attribute)">
+    <span class="form-step md-whiteframe-2dp" ng-class="{'validate': attributesVm.choiceValidate(attribute)}">
+      <span class="number">{{attribute.order + 1}}</span>
+      <md-icon>done</md-icon>
+    </span>
+    <header class="form-header">
+      <h2 class="form-header-title">{{attribute.title}}</h2>
+      <p class="form-header-subtitle" ng-if="attribute.subtitle">
+        {{attribute.subtitle}}
+      </p>
+    </header>
+
+    <div ng-include="attributesVm.getForm(attribute)"></div>
+  </div>
+
+  <div id="summary" class="layout-child layout-child_spacing form md-whiteframe-2dp" ng-if="attributesVm.product"   ng-class="{'active': attributesVm.current == 'summary'}">
+    <div ng-include="attributesVm.getResultView(attributesVm.product)"></div>
+  </div>
+  <!-- TODO: extract in controller view :-->
+  <div id="packaging-1" class="layout-child layout-child_spacing form md-whiteframe-2dp"
+      ng-if="attributesVm.showPack"
+      ng-class="{'active': attributesVm.current == 'packaging-1'}">
+    <span class="form-step md-whiteframe-2dp">
+      <span class="number">10</span>
+      <md-icon>done</md-icon>
+    </span>
+    <header class="form-header">
+      <h2 class="form-header-title">Séléctionner la finition de votre pot</h2>
+    </header>
+    <div layout="row" layout-align="space-around center" class="circle-btn {{attributesVm.packTexture}}">
+      <md-button class="md-raised form-btn">PVC</md-button>
+      <md-button class="md-raised form-btn glass" ng-class="{'md-primary': attributesVm.packTexture == 'glass'}">Verre</md-button>
+      <md-button class="md-raised form-btn">Inox</md-button>
+      <md-button class="md-raised form-btn wood" ng-class="{'md-primary': attributesVm.packTexture == 'wood'}" ng-click="attributesVm.changePackTexture()">Bambou</md-button>
+    </div>
+    <span class="circle-select top"></span>
+    <div class="preview"></div>
+    <span class="circle-select bottom"></span>
+    <div layout="row" layout-align="space-around center">
+      <md-button class="md-raised form-btn">PVC</md-button>
+      <md-button class="md-raised md-primary form-btn">Verre</md-button>
+      <md-button class="md-raised form-btn">Inox</md-button>
+      <md-button class="md-raised form-btn">Bambou</md-button>
+    </div>
+    <md-button class="md-raised form-validate" ng-click="attributesVm.validePack('packaging-1');">Valider vos finitions</md-button>
+  </div>
+  <div id="packaging-2" class="layout-child layout-child_spacing form md-whiteframe-2dp"
+      ng-if="attributesVm.showPack"
+      ng-class="{'active': attributesVm.current == 'packaging-2'}">
+      <span class="form-step md-whiteframe-2dp">
+        <span class="number">11</span>
+        <md-icon>done</md-icon>
+      </span>
+      <header class="form-header">
+        <h2 class="form-header-title">Personnaliser l'étiquette de votre crème</h2>
+      </header>
+      <div class="eti-color">
+        <p>Couleur</p>
+        <div ng-click="attributesVm.changeEtiquette();"><img src="/img/palette-{{attributesVm.palette}}.png" alt="" /></div>
+      </div>
+      <div class="eti-txt">
+        <div class="eti-img">
+          <img src="{{attributesVm.imgEtiquette}}" alt="" />
+          <p style="color:{{attributesVm.colorEtiquette}};">{{attributeVm.etiquette}}</p>
+        </div>
+        <md-input-container class="form-input">
+          <label><span>Insérez votre texte</span></label>
+          <input ng-model="attributeVm.etiquette"/>
+        </md-input-container>
+      </div>
+      <md-button class="md-raised form-validate" ng-click="attributesVm.validePack('packaging-2');">Valider votre étiquette</md-button>
+  </div>
+  <div id="summary2" class="layout-child layout-child_spacing form md-whiteframe-2dp" ng-if="attributesVm.showPack" ng-class="{'active': attributesVm.current == 'summary2'}">
+    <header class="form-header">
+      <h2 class="form-header-title">Félicitation vous avez créé votre packaging</h2>
+    </header>
+    <div class="preview" style="background-image:url(/img/pack/pot-bamboo.jpg)"></div>
+    <div layout="column" layout-align="center center">
+      <md-button class="md-raised static-width">Sauvegarder ma crème</md-button>
+      <md-button class="md-raised static-width" ng-href="/panier">Déplacer ma crème dans mon panier d'achat</md-button>
+      <md-button class="md-raised static-width" ng-href="/panier">Commander un échantillon gratuit pour tester ma crème</md-button>
+    </div>
+  </div>
+
+  <div class="logo">
+    <img src="/img/logo_white.svg">
+  </div>
+
+</div>

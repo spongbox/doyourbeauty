@@ -1,1 +1,1 @@
-nodemon --watch app -e js -x "npm run build-js"
+nodemon --watch app -e js -x "gulp js"
