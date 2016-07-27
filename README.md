@@ -1,5 +1,5 @@
 # Doyourbeauty
-Projet de compétition de 2éme année en Master Expert Stratégie digital à l'IESA Multimédia.
+Projet create in school
 
 ## Install
 
@@ -12,8 +12,8 @@ npm install
 npm run dev
 ```
 
-##Site web
+##Web site
 
-[Voir le site en ligne](http://lab.doyourbeauty.com/)
+[Disover the web site](http://lab.doyourbeauty.com/)
 
 
